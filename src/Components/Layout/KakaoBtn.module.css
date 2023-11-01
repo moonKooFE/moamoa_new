@@ -1,0 +1,50 @@
+.kbutton {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #F9E54D;
+    color: #3E3030;
+    display: flex;
+    width:39.1vh;
+    height: 5.45vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.73vh;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .kbutton:hover,
+  .kbutton:active {
+    background-color: #F9E54D;
+  }
+  
+  .icon {
+    width: 1.8vh;
+    height: 1.66vh;
+    margin-right:3vh;
+    
+  }
+  
+  .bump {
+    animation: bump 300ms ease-out;
+  }
+  
+  @keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
