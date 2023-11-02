@@ -1,0 +1,25 @@
+.active {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #1C66FD;
+    color: white;
+    width:43.25vh;
+    height: 5.33vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1.9vh;
+    font-weight: 400;
+    font-size: 1.9vh;
+  }
+
+  
+  .button:hover,
+  .button:active {
+    background-color: #2c0d00;
+  }
+  
+  
+  
+  
