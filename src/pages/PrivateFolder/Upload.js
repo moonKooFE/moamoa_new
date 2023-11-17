@@ -129,7 +129,7 @@ function App(props) {
 
   return (
     <div className={styles.App}>
-      <div className={styles.App1}></div>
+      <div className={styles.App1} onClick={props.modalState1}></div>
       <div className={styles.App2}>
         <div className={styles.controler}></div>
         <div className={styles.close} onClick={props.modalState1}></div>

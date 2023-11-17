@@ -1,6 +1,5 @@
 import {useState, usetate} from 'react';
 import styles from './ManagingFolderModal.module.css';
-import { Link } from 'react-router-dom';
 import EscapeModal from "./EscapeModal";
 import MemberManageModal from "./MemberManageModal";
 import ModifyAlbumModal from "./ModifyAlbumModal";

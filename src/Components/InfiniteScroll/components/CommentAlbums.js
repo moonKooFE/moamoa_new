@@ -9,7 +9,7 @@ export default function Comment({ mesureRef, comment, commentType }) {
   const navigate = useNavigate();
 
   const openAlbum = () => {
-    navigate('/folder', {state:{
+    navigate('/PrivateFolder', {state:{
       id : comment.id,
       name : comment.name,
       img : comment.image

@@ -40,7 +40,7 @@ const PhotoModal = (props) => {
       .then(function(res){
         //console.log(res);
         alert("사진 1장을 삭제하였습니다.");
-        window.location.replace('/folder');
+        window.location.replace('/PrivateFolder');
       })
       .catch(function(err){
         //console.log(err);

@@ -8,12 +8,12 @@ import {
   useEffect,
 } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import PhotoAlbumModal from "../../Components/";
+import PhotoAlbumModal from "./PhotoAlbumModal";
 import client from "../../Client"
 import AllposesContent from "../../Components/UI/AllposesContent";
 import AlbumsIS from "../../Components/InfiniteScroll/AlbumsIS";
 import LogoImg from "../../Assets/moamoa.svg"
-// import PhotoModal from "./recircleComponets/PhotoModal";
+// import PhotoModal from "./PhotoModal";
 
 const TabMenu = styled.div`  
   color: black;
@@ -170,7 +170,8 @@ const Tap2 = (props) => {
 
   return(
     <div className={stylesTap2.Tap2}>
-      {/* { modal == true ? <PhotoAlbumModal modalState={modalState} /> : null } modal 인터페이스 */}
+      { /* modal 인터페이스 */}
+      { modal == true ? <PhotoAlbumModal modalState={modalState} /> : null } 
       <AlbumsIS heightOfComponent={'73.5vh'} headerComponent={Tap2headerComponent}/>
       <div className={stylesTap2.createAlbum} onClick={()=>{setModal(!modal)}}></div>
     </div>

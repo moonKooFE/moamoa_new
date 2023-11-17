@@ -106,7 +106,7 @@ function App(props) {
                 console.log(response);
                 alert("수정되었습니다.");
                 props.modalState4();
-                window.location.replace('/folder');
+                window.location.replace('/PrivateFolder');
             })
             .catch(function (error) {
                 //console.log(error);
