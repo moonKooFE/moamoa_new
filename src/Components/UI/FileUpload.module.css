@@ -1,0 +1,68 @@
+
+.circle{
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 7vh;
+    width: 13.5vh;
+    height: 13.5vh;
+    background-color: #373737ae ;
+    position: relative;
+    top: 5vh;
+}
+.camera{
+    width:13.5vh;
+    height: 13.5vh;
+    border: 0.1vh solid #ffffffb6;
+    border-radius: 7vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.camera2{
+    width: 3vh;
+    height: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-bottom: 8vh;
+
+}
+
+.camera1{
+    display: none;
+}
+.camera::file-selector-button{
+    background-color: #ffffff;
+    outline:none;
+    cursor: pointer;
+}
+
+
+.circle label .camera2{
+    line-height: center;
+}
+
+.circle input[type="file"]{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.circle label .camera2{
+    position: relative;
+    display:flex;
+    top: 4vh;
+}
+.imgtag{
+    height: 13.5vh;
+    width:13.5vh;
+    object-fit: contain;
+    border-radius: 7vh;
+}

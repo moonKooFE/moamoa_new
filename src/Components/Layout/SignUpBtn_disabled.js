@@ -2,7 +2,7 @@ import styles from './SignUpBtn_disabled.module.css';
 
 const SignUpBtn = (props) => {
     return(
-        <button className={styles.disabled} onClick={props.onClick}>
+        <button className={styles.disabled} >
             <span>계속하기</span>
         </button>
     )

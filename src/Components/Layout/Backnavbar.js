@@ -12,8 +12,10 @@ const Backnavbar = ({title}) => {
 
     return(
         <div className={styles.box}>
-            <img className={styles.back} src={Arrow} onClick={goBack}/>
-            <span>{title}</span>
+            <div className={styles.backParent}>
+                <img className={styles.back} src={Arrow} onClick={goBack}/>
+            </div>
+            <div className={styles.title}>{title}</div>
         </div>
     )
 }

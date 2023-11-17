@@ -1,0 +1,71 @@
+@import url("../../Global.css");
+
+.barline{
+    border: 1px solid #E6E9EC;
+    border-radius: 4.56vh;
+    width:39vh;
+    height: 7.63vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.minus{
+    width: 1.5vh;
+    height: 0.25vh;
+}
+.plus{
+    width: 2.08vh;
+    height: 2vh;
+}
+.count{
+    font-size: 4vh;
+    font-family: 'Pretendard-Regular';
+    margin-left: 11.63vh;
+    margin-right: 11.63vh;
+    
+}
+.rangeError{
+    font-size: 1.7vh;
+    color: red;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+.randBtn{
+    width: 41vh;
+    height: 7vh;
+    text-align: center;
+    line-height: 7vh;
+    border-style: none;
+    background: #1C66FD;
+    border-radius: 3vh;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Pretendard-SemiBold';
+    margin-top: 31.75vh;
+    
+  }
+  .randBtnDisabled{
+    background: #E4E4E4;
+    width: 41vh;
+    height: 7vh;
+    text-align: center;
+    line-height: 7vh;
+    border-style: none;
+    border-radius: 3vh;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Pretendard-SemiBold';
+    margin-top: 32.25vh;
+  }
+.buttonBg{
+    margin-right:1.67%;
+}
+.rangecorrect{
+    height: 2.05vh;
+    margin-top: 2vh;
+}

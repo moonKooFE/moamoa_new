@@ -1,0 +1,86 @@
+@import url('../../Global.css');
+
+.ShowRandPose {
+  text-align: center;
+  color : black;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Pretendard-Regular';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backnavbar{
+    position:absolute;
+    margin-top: 10.13vh;
+}
+
+.inflow3Script{
+  margin-top: 14.37vh;
+  font-family: 'Pretendard-SemiBold';
+  height: 2.75vh;
+  font-size: 2.25vh;
+}
+
+.hashTag{
+  margin-top: 2.5vh;
+  height: 2.38vh;
+  font-size: 2vh;
+}
+
+.poseAria{
+    margin-top: 2.63vh;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.1));
+    background-color: white;
+    border-radius: 16px;
+    width: 36.5vh;
+    height: 52.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.imgArea{
+    height : 31vh;
+    margin-bottom: 3.25vh   ;
+    /* width: 25.75vh; */
+    display: flex;
+    align-items: center;
+}
+
+.pose{
+    /* height : 31vh;
+    width: 25.75vh; */
+    object-fit: contain;
+    border-radius: 16px;
+    transition: 0.2s;
+}
+
+.reroll{
+    width: 3.9vh;
+    height: 4.34vh;
+    transform-origin: 1.95vh 2.32vh;
+    transition: 0.2s;
+}
+
+.gotoAllposes{
+    margin-top: 2.63vh;
+    height: 2.75vh;
+    font-size: 1.75vh;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.underline{
+    margin-top: -0.5vh;
+    height: 1px;
+    width: 10vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.SignUpBtn{
+    margin-top: 7.38vh;
+}

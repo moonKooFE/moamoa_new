@@ -1,0 +1,122 @@
+@import url("../../Global.css");
+
+.App2 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color : black;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Pretendard-Regular';
+}
+
+.backnavbar{
+  margin-top: 10.13vh;
+}
+
+.content{
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.invisibleNav2 {
+  display : flex;
+  justify-content : center;
+  align-items:end;
+  font-size: 2.2vh;
+  width: 100%;
+  height: 10vh;
+  padding-bottom: 2vh;
+  /* border-bottom: white solid 1px; */
+}
+
+
+
+.inflow2Script{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 9.5vh;
+  margin-bottom: 7.75vh;
+  padding-right: 10vh;
+  height: 10vh;
+  width: fit-content;
+
+}
+
+.inflow2ScriptFirst{
+  font-size: 3.6vh;
+  font-family: 'Pretendard-SemiBold';
+  margin-bottom: 2.37vh;
+  
+}
+
+.inflow2ScriptSecond{
+  font-size: 16px;
+  color:black;
+  opacity: 50%;
+  font-family: "Pretendard-Light";
+  
+}
+
+.peopleContainer{
+  box-sizing: border-box;
+  width: 35vh;
+  height: 7vh;
+  border: 1.5px solid black;
+  border-radius: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4vh;
+}
+
+.plus{
+  background-image: url("../../Assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 2.5vh;
+  background-position: center;
+  height: 7vh;
+  width: 14vh;
+  margin-left: 8vh;
+}
+
+.minus{
+  background-image: url("../../Assets/minus.png");
+  background-repeat: no-repeat;
+  background-size: 2vh;
+  background-position: center;
+  height: 7vh;
+  width: 14vh;
+  margin-right: 8vh;
+}
+
+.rangeError{
+  font-size: 1.7vh;
+  color: red;
+  margin: 2vh;
+}
+
+.randBtn, .randBtnDisabled{
+  width: 40vh;
+  height: 7vh;
+  text-align: center;
+  line-height: 7vh;
+  border-style: none;
+  background: #1C66FD;
+  border-radius: 16px;
+  font-size: 2.2vh;
+  color: white;
+  text-decoration: none;
+  font-family: 'Pretendard-SemiBold';
+}
+
+.randBtnDisabled{
+  background: #E4E4E4;
+}
+

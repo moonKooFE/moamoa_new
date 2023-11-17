@@ -4,7 +4,7 @@
     border: none;
     background-color: #E4E4E4;
     color: white;
-    width:101.39%;
+    width:43.25vh;
     height: 5.33vh;
     display: flex;
     justify-content: space-around;
@@ -12,6 +12,7 @@
     border-radius: 1.9vh;
     font-weight: 400;
     font-size: 1.9vh;
+    margin-top: 1.5vh;
 }
   
   .button:hover,

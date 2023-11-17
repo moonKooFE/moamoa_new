@@ -1,0 +1,19 @@
+.div{
+    display: flex;
+    flex-direction: row;
+    width: 100.28%;
+    justify-content: center;
+    align-items: center;
+    
+    border-bottom: 1px solid #E6E9EC;
+}
+.input{
+    border:none;
+    height: 4.15vh;
+    width: 89.72%;
+    outline:none;
+}
+.del{
+    width:2.31vh;
+    height: 2.31vh; 
+}

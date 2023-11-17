@@ -1,0 +1,19 @@
+@import url("../../Global.css");
+.BG{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.BG > a{
+    font-family: "Pretendard-ExtraLight";
+    font-size: 16px;
+    margin-left: 34.13vh;
+    margin-top: 8vh;
+}
+.img{
+    width:39.75vh;
+    height: 9.5vh;
+    margin-top: 4.75vh;
+    margin-bottom: 59.5vh;
+}

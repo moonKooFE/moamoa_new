@@ -1,30 +1,40 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('../../Assets/font/Pretendard-Regular.woff') format('woff');
+  font-style: normal;
+}
 .kbutton {
     cursor: pointer;
-    font: inherit;
     border: none;
     background-color: #F9E54D;
     color: #3E3030;
     display: flex;
-    width:39.1vh;
-    height: 5.45vh;
+    width: 39vh;
+    height: 7.43vh;
     justify-content: center;
     align-items: center;
-    border-radius: 2.73vh;
-    font-weight: 500;
+    border-radius: 2.92vh;
     text-align: center;
     text-decoration: none;
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    margin: 0;
+    
   }
   
-  .kbutton:hover,
-  .kbutton:active {
-    background-color: #F9E54D;
-  }
+  
   
   .icon {
-    width: 1.8vh;
-    height: 1.66vh;
+    width: 2.01vh;
+    height: 1.86vh;
     margin-right:3vh;
-    
+    position: relative;
+    top: .2vh;
+  }
+  .text {
+    margin-right: 4vh;
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
   }
   
   .bump {
