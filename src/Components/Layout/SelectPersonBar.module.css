@@ -9,6 +9,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 1vh;
+    margin-top: .5vh;
     
     
 }

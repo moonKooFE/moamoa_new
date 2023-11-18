@@ -26,7 +26,9 @@ export default function CommentList({
 
   return (
     <div className="comment-list" style={{height:heightOfComponent}}>
-      <PlusBtn modalState1={modalState1} />
+      <div>
+        <PlusBtn modalState1={modalState1} />
+      </div>
       {comments.map((comment, index) => {
         if (index === comments.length - 1) {
           return (

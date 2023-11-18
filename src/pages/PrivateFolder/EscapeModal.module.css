@@ -1,3 +1,4 @@
+@import url("../../Global.css");
 .App{
     position: fixed;
     top: 0;
@@ -18,50 +19,64 @@
     justify-content: center;
 }
 .background7{
-    width: 80%;
-    height: 20vh;
+    width: 37.74vh;
+    height: 18.5vh;
     color : rgb(0, 0, 0);
     font-family: 'Pretendard-Regular';
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     background-color: white;
     border-radius: 1vh;
-    z-index: 1999;
-    margin-top: 38vh;
+    z-index: 11;
+    margin-top: 40.63vh;
 }   
 .msg1{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 4vh;
-    font-weight: 400; 
-    font-size: 2.3vh;
+    font-family: "Pretendard-Medium";
+    font-size: 2vh;
     margin-bottom: 0;
+    color: #48505C;
+    margin-top: -0.75vh;
 }
 .msg2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #48505C;
+    color: #48505c;
+    opacity: 60%;
     font-size: 1.5vh;
-   
+    font-family: "Pretendard-Medium";
+    margin-top: 1.28vh;
+    margin-bottom: 3vh;
 }
 
 .goout{
-    padding: 1.6vh 2vh 1.6vh 2vh;
+    /* padding: 1.6vh 2vh 1.6vh 2vh; */
     border-style: none;
     background: #1C66FD;
-    border-radius: 1vh;
-    margin: auto;
+    border-radius: 0.75vh;
+    text-align: center;
     font-size: 1.5vh;
     color:rgb(255, 255, 255);
-    /* top: 4vh;;
-    position: relative; */
-    text-align: center;
-    width: 80%;
-    font-weight: 900;
-    flex-direction: left;
+    font-family: "Pretendard-Medium";
+    justify-content: center;
+    width: 35vh;
+    height: 5.38vh;
+    line-height: 5vh;
+
 }
+.closebox{
+    width: 100%;
+}
+.close{
+    width:1.46vh;
+    height:1.46vh;
+    margin-left: 34vh;
+    margin-top: 1.95vh;
+}
+

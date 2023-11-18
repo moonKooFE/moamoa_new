@@ -22,7 +22,7 @@
 
 .Content{
     position: fixed;
-    margin-top: 37.5vh;
+    margin-top: 40.5vh;
     background-color: rgb(255, 255, 255);
     border-radius: 1.5vh;
     width: 37.74vh;
@@ -45,5 +45,5 @@
     font-family: "Pretendard-Medium";
     font-size: 16px;
     color: #48505C;
-    margin-bottom: 3vh;
+    margin-bottom: 3.38vh;
 }

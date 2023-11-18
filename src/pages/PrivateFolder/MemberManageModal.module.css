@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     justify-content: center;
-    z-index: 1;
+    z-index: 13;
     width: 100%;
     display: flex;
 
@@ -29,27 +29,25 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    border-radius: 1vh 1vh 0 0;
-    z-index: 1;
+    border-radius: 1.5vh 1.5vh 0 0;
+    z-index: 13;
     bottom: 0vh;
     left: 0;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     transition: 1s ease;
 }
 .controler1{
-    width: 4vh;
-    height: 1vh;
-    /* background-image: url('../../resource/controler.png'); */
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-top: 1.2vh;
+  width: 3.5vh;
+  height: .5vh;
+  margin-top: 2vh;
 }
 .membermanage{
     font-family: 'Pretendard-Bold';
     text-align: center;
     width: 100%;
-    margin-top: 1vh;
+    margin-top: 1.88vh;
+    color: #48505C;
 }
 .membersArea{
     overflow-x:scroll;
@@ -57,34 +55,43 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-top: 3vh;
-    transition: 0.25s;
+    margin-top: 2.5vh;
+    transition: 0.20s;
+    align-items: center;
 }
+
     .box10{
         display: flex;
         justify-content: start;
         align-items: center;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
+        width: 39vh;
+        padding-bottom: 2.75vh;
     }
         .membermanageimg{
             border-radius: 7vh;
             background-color: #1C66FD;
             width: 3.5vh;
             height: 3.5vh;
-            margin-left: 3vh;
+            
         }
         .membermanage5{
-            font-family: 'Pretendard-ExtraLight';
-            font-size: 2vh;
-            margin-left: 1vh;
+            font-family: 'Pretendard-Regular';
+            font-size: 1.75vh;
+            margin-left: 1.5vh;
+            color: #5C5C5C;
         }
-
+.box11{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DADADA;
+  width: 3.5vh;
+  height: 3.5vh;
+  
+  border-radius: 7vh;
+}
 .addmember{
-    /* background-image: url(../../resource/cplus.png); */
-    background-repeat: no-repeat;
-    background-size: 3.5vh;
-    width: 3.5vh;
-    height: 3.5vh;
-    margin-left: 3vh;
+    width: 1.46vh;
+    height: 1.46vh;
+    
 }

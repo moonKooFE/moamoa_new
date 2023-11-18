@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'Pretendard-SemiBold';
-    src: url('../../Assets/font/Pretendard-SemiBold.woff') format('woff');
-    font-style: bold;
-}
+@import url("../../Global.css");
 .box{
     text-align: center;
     display: flex;

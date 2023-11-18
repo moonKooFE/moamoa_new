@@ -1,9 +1,16 @@
 .plusBtn{
-    margin-top: 0vh;
-    width: 14vh;
-    height: 14vh;
-    /* background-image: url('../../resource/Group67.png'); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    margin-top: 11.26vh;
+    width: 7vh;
+    height: 7vh;
+    background-color: #1C66FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 4.13vh;
+}
+.plus{
+    width: 2.76vh;
+    height: 2.76vh;
+
 }

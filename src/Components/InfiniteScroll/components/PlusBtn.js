@@ -1,8 +1,10 @@
-import styled from "./PlusBtn.module.css";
+import styles from "./PlusBtn.module.css";
+import Plus from "../../../Assets/plus2.png";
 
 function plusBtn(props) {
     return (
-        <div className={styled.plusBtn} onClick={props.modalState1}></div>
+        <div className={styles.plusBtn} onClick={props.modalState1}><img src={Plus} className={styles.plus}/></div>
+        
     )
 }
 

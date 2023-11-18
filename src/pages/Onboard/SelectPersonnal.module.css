@@ -76,25 +76,7 @@
   font-size: 4vh;
 }
 
-.plus{
-  background-image: url("../../Assets/plus.png");
-  background-repeat: no-repeat;
-  background-size: 2.5vh;
-  background-position: center;
-  height: 7vh;
-  width: 14vh;
-  margin-left: 8vh;
-}
 
-.minus{
-  background-image: url("../../Assets/minus.png");
-  background-repeat: no-repeat;
-  background-size: 2vh;
-  background-position: center;
-  height: 7vh;
-  width: 14vh;
-  margin-right: 8vh;
-}
 
 .rangeError{
   font-size: 1.7vh;
@@ -119,4 +101,5 @@
 .randBtnDisabled{
   background: #E4E4E4;
 }
+
 

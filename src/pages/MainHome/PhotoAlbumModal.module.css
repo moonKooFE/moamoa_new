@@ -9,9 +9,9 @@
   color : white;
   height: 100vh;
   width: 100%;
-  font-family: 'Pretendard-Regular';
+  font-family: 'Pretendard-Medium';
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -24,78 +24,90 @@
 }
 
 .inviteAria{
-  position: relative;
-  top : -10vh;
+  position: absolute;
+  font-family: 'Pretendard-Medium';
   background-color: white;
-  z-index: 999;
-  width: 90%;
-  height: 27vh;
-  border-radius: 12px;
+  z-index: 2;
+  width: 39vh;
+  height: 24vh;
+  border-radius: 1.5vh;
+  margin-top: 38vh;
 }
 
 .nav{
-  height: 7vh;
+  height: 6.38vh;
   border-bottom: #DFDFDF 1px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0vh 2vh 0vh 2vh;
+  padding: 0vh 2.5vh 0vh 2.5vh;
   color: black
+}
+.quit{
+  font-family: "Pretendard-Medium";
+  color: #D8D8D8;
+  font-size: 1.75vh;
 }
 
 .inputAlbumName, .inputUserId{
   border: 0;
   outline: none;
-  font-size: 1.8vh;
+  font-size: 1.5vh;
+  margin-left: -1vh;
 }
-
+.inputAlbumName::placeholder{
+  color: #D8D8D8;
+  
+}
 .inputAlbumName{
-  margin-top: 2vh;
-  width: 92%;
+  margin-top: 1.75vh;
+  width: 80%;
 }
 
 .example{
-  color:#C0B7B7;
-  margin-top: 10.5vh;
+  color:#D8D8D8;
+  margin-top: 6.75vh;
+  font-size: 1.75vh;
 }
 
 .inputUserIdArea{
-  font-size: '1.8vh';
+  font-size: 1.5vh;
   color: #D8D8D8;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 2vh;
-  margin-left: 5%;
-  margin-bottom: 1vh;
+  margin-top: 1vh;
+  margin-left: 2.75vh;
+  
 }
 
 .inputUserId{
   padding: 0;
   margin: 0;
-  width: 110px;
+  /* width: 110px; */
   font-family: 'Pretendard-ExtraLight';
 }
 
 .filterUsers{
   display: flex;
   flex-direction: column;
-  height: 12.5vh;
   overflow-y: scroll;
+  margin-bottom: 0vh;
 }
 
 .filterUsers > div {
-  color: black;
-  margin-left: 5%;
-  margin-top: 0.5vh;
+  color: #5C5C5C;
+  margin-left: 3vh;
+  font-size: 1.75vh;
   text-align: left;
   display: flex;
   align-items: center;
+  margin-bottom: 2vh;
 }
 
 .filterUsers > div > img {
-  margin: 0.5vh 1vh 0.5vh 0.5vh;
-  width: 3vh;
-  height: 3vh;
+  margin: 0.5vh 1.38vh 0.5vh 0vh;
+  width: 3.5vh;
+  height: 3.5vh;
   border-radius: 100%;
 }

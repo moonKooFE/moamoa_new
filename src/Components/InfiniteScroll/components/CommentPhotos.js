@@ -4,6 +4,7 @@ import modalstyled from "./modalStyle.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import client from "../../../Client";
+import trashCan from "../../../Assets/Trash.png";
 
 export default function Comment({ mesureRef, comment, commentType, albumId }) {
   const [imgUrl, setImgUrl] = useState(comment.image);
@@ -53,7 +54,7 @@ const PhotoModal = (props) => {
       <div className={modalstyled.ModalBackground} onClick={props.modalState}></div>
       <div className={modalstyled.ModalArea}>
         <div>
-          <div className={modalstyled.trashCan} onClick={deletePhoto}></div>
+          <img src={trashCan} className={modalstyled.trashCan} onClick={deletePhoto}/>
         </div>
         <div className={modalstyled.title}>{props.comment.name}</div>
         <div className={modalstyled.date}>{props.comment.created_at}</div>

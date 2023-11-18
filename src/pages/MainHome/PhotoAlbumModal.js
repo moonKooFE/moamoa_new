@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import defaultImg from "../../Assets/moamoa.svg";
 import client from "../../Client";
-
+import BlueScreen from "../../Assets/BlueScreen.png";
 // App.defaultProps = {
 //   userList: [],
 // };
@@ -45,7 +45,9 @@ const App = (props) => {
   const idInputFocus = () => {
     idInputRef.current.focus();
   };
-
+  const Alterimg = (event) => {
+    event.target.src = BlueScreen;
+  }
   useEffect(() => {
     if (titleInputRef.current) {
       titleInputFocus();
@@ -120,8 +122,8 @@ const App = (props) => {
         <div className={styles.ModalBackground}></div>
         <div className={styles.inviteAria}>
           <div className={styles.nav}>
-            <div onClick={onCancel}>취소</div>
-            <div style={{fontSize:'2.2vh'}}>사진첩 이름</div>
+            <div className={styles.quit}onClick={onCancel}>취소</div>
+            <div style={{fontSize:'1.75vh'}}>사진첩 이름</div>
             <NextBtn value={albumTitle} goToPage2={goToPage2}/>
           </div>
           <div>
@@ -137,18 +139,18 @@ const App = (props) => {
           <div className={styles.ModalBackground}></div>
           <div className={styles.inviteAria}>
             <div className={styles.nav}>
-            <div onClick={goBack}>이전</div>
-            <div onClick={() => idInputFocus()} style={{fontSize:'2.2vh'}}>초대하기</div>
+            <div className={styles.quit}onClick={goBack}>취소</div>
+            <div onClick={() => idInputFocus()} style={{fontSize:'1.75vh'}}>초대하기</div>
             <GenarateBtn value={userID} pushBackToUserList={pushBackToUserList} albumTitle={albumTitle} userIdList={userIdList} modalState={props.modalState}/>
 
           </div>
           <div className={styles.inputUserIdArea}>
-            친구 아이디 : &nbsp;
+            친구 닉네임 : &nbsp;
             {userList.map((userList, index) => <span key={index} style={{color:"black"}}>{userList.nickname}&nbsp;</span>)}
             <input ref={idInputRef} onChange={saveUserID} value={userID} type="text" maxLength={12} className={styles.inputUserId}></input>
           </div>
           <div className={styles.filterUsers}>
-            {userListFilter.map((userListFilter, index) => <div className={styles.filterUser} key={index} onClick={() => pushBackToUserList(userListFilter)}><img loading="lazy" src={userListFilter.image}></img>{userListFilter.nickname}</div>)}
+            {userListFilter.map((userListFilter, index) => <div className={styles.filterUser} key={index} onClick={() => pushBackToUserList(userListFilter)}><img loading="lazy" src={userListFilter.image} onError={Alterimg}></img>{userListFilter.nickname}</div>)}
           </div>
         </div>
       </div>
@@ -159,9 +161,9 @@ const App = (props) => {
 
 function NextBtn(props) { // input의 조건을 검사하여 일치할 시 활성화 된 '다음' 버튼 return
   if(props.value.length > 0 && props.value.length < 11){ // album title 의 조건 검사 (중복검사, 글자 수 제한)
-    return <div style={{color:'#113C7E'}} onClick={()=>{props.goToPage2()}}>다음</div> // 활성화됨
+    return <div style={{color:'#1C66FD'}} onClick={()=>{props.goToPage2()}}>다음</div> // 활성화됨
   } else {
-    return <div style={{color:'#B7B6B4'}}>다음</div> // 비활성화
+    return <div style={{fontSize:'1.75vh',color:'#B7B6B4'}}>다음</div> // 비활성화
   }
 }
 
@@ -224,11 +226,11 @@ function GenarateBtn(props) { // input의 조건을 검사하여 일치할 시 �
   }
   if(props.userIdList.length > 0){ // userId의 조건 검사
     if(!disableBtn)  
-      return <div style={{color:'#113C7E'}} onClick={onGenarateHandler}>생성</div> // 활성화됨
+      return <div style={{fontSize:"1.75vh",color:'#1C66FD'}} onClick={onGenarateHandler}>다음</div> // 활성화됨
     else
-      return <div style={{color:'#113C7E'}}>생성 중..</div> // 활성화됨
+      return <div style={{fontSize:"1.75vh",color:'#1C66FD'}}>생성 중..</div> // 활성화됨
   } else {
-    return <div style={{color:'#B7B6B4'}}>생성</div> // 비활성화
+    return <div style={{fontSize:"1.75vh",color:'#B7B6B4'}}>다음</div> // 비활성화
   }
 }
 

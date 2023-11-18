@@ -13,7 +13,7 @@ function App(){
           <div className={styles.inflow2ScriptFirst}>몇 명이서 사진을<br/>찍을 건가요?</div>
           <div className={styles.inflow2ScriptSecond}>사람 수에 따른 포즈를 추천해드릴게요!</div>
         </div>
-        <SelectPersonBar />
+        <SelectPersonBar/>
       </div>
     </div>
   )
