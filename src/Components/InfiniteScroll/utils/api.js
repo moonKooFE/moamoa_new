@@ -34,7 +34,7 @@ class Api {
       }).catch(function(err){
         //console.log(err);
         alert("로그인 세션이 만료되었습니다. 다시 로그인 해주세요.");
-        window.location.replace("/Onborad");
+        window.location.replace("/Onboard");
       });
     } else if(requsetType.includes("PHOTOS")){
       if(sessionStorage.getItem('token') != undefined){
@@ -48,7 +48,7 @@ class Api {
       }).catch(function(err){
         //console.log(err);
         alert("로그인 세션이 만료되었습니다. 다시 로그인 해주세요.");
-        window.location.replace("/loginpage2");
+        window.location.replace("/Onboard");
       });
     }
     return response;

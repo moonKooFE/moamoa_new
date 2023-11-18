@@ -110,7 +110,7 @@ function App(props) {
                 //console.log(response);
                 alert("사진 1장을 업로드하였습니다.");
                 props.modalState1();
-                window.location.replace('/folder');
+                window.location.replace('/PrivateFolder');
             })
             .catch(function (error) {
                 //console.log(error);

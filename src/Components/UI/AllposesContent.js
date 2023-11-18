@@ -8,29 +8,35 @@ import {
 } from "react";
 import { useLocation } from "react-router-dom";
 import InfiniteScroll from "../InfiniteScroll/InfiniteScroll"
-// import SelectPeopleModal from "";
+import SelectPeopleModal from "./SelectPeopleModal";
+import VectorForSelcectPeople from "../../Assets/VectorDown.svg"
 
 const TabMenu = styled.div`  
-  
+
   color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top:2vh;
-  padding-bottom: 2vh;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  padding-left: 5.38vw;
+  padding-right: 9.44vw;
   justify-content: space-between;
   list-style: none;
-  width: 100%;
+  width: calc(100% - 5.38% - 9.44%);
   background-color:white;
 
   .submenu {
     // 기본 Tabmenu 에 대한 CSS를 구현
     text-align : center;
-    padding: 1vh 1.5vh;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
     border-radius : 5vh;
-    font-size: 1.7vh;
+    font-size: 1.75vh;
     transition : 0.5s;
-    margin-left : 0.5vh
+    font-family: 'Pretendard-Medium';
   }
 
   .focused {
@@ -41,13 +47,12 @@ const TabMenu = styled.div`
 
   span{
     display : flex;
-    margin-left :2vh;
   }
 
 `;
 
 const App = (props) => {
-    // api={props.api} heightOfComponet={props.height}
+    // heightOfComponet={props.height}
     // location.state.people
 
     const location = useLocation();
@@ -61,8 +66,8 @@ const App = (props) => {
     }
 
     const menuArr = [
-        { name: "추천", content: <Tap1 currentTab={currentTab} api={props.api} height={props.height}/> },
-        { name: "스페셜", content: <Tap2 currentTab={currentTab} api={props.api} height={props.height}/> },
+        { name: "추천", content: <Tap1 currentTab={currentTab} height={props.height}/> },
+        { name: "스페셜", content: <Tap2 currentTab={currentTab} height={props.height}/> },
     ];
 
     const selectMenuHandler = (index) => {
@@ -76,16 +81,11 @@ const App = (props) => {
         
         clickTab(index);
     }
-    
-    // useEffect(() =>{
-    //     sessionStorage.setItem('category', 'ROLE_ADMIN');
-    //     sessionStorage.setItem('people', location.state == null ? 1 : location.state.Tap == 1 ? 1 : location.state.people);
-    //     console.log("reloaded");
-    // },[]);
 
     return (
-        <div className={styles.App} style={{backgroundColor:'rgba(243, 243, 243, 0.9)', width: '100%'}}>
-            {/* { modal == true ? <SelectPeopleModal modalState={modalState} /> : null } modal 인터페이스 */}
+        <div className={styles.App}>
+            {/* modal 인터페이스 */}
+            { modal == true ? <SelectPeopleModal modalState={modalState} /> : null } 
             <TabMenu>
                 <span>
                 {menuArr.map((el, index) => (
@@ -95,7 +95,9 @@ const App = (props) => {
                 </div>
                 ))}
                 </span>
-                <div className={styles.selectPeople} onClick={modalState}>{ sessionStorage.getItem('people') === undefined || init ? '인원수 ▾' : "#"+sessionStorage.getItem('people')+"명이서" }</div>
+                <div className={styles.selectPeople} onClick={modalState}>
+                  { sessionStorage.getItem('people') === undefined || init ? <div>인원수<img src={VectorForSelcectPeople}/></div> : <div style={{textDecoration:"underline"}}>#{sessionStorage.getItem('people')}명이서</div> }
+                </div>
             </TabMenu>
             <div className={currentTab == 0 ? styles.borderL : styles.borderR}></div>
             {menuArr[currentTab].content}
@@ -111,7 +113,7 @@ const Tap1 = (props) => {
     
     return(
       <div className={stylesTap1.Tap1}>
-        <InfiniteScroll api={props.api} heightOfComponent={props.height} headerComponent={Tap1headerComponet}/>
+        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tap1headerComponet}/>
       </div>
     )
   }
@@ -121,7 +123,7 @@ const Tap2 = (props) => {
   
     return( 
       <div className={styles.Tap2}>
-        <InfiniteScroll api={props.api} heightOfComponent={props.height} headerComponent={Tap2headerComponet}/>
+        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tap2headerComponet}/>
       </div>
     )
 }

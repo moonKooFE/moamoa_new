@@ -12,7 +12,7 @@ const httpClient = axios.create({
 const api = new Api(httpClient);
 
 export default function App(props) {
-  // props.heightOfComponet, props.headerComponet
+  // props.heightOfComponet, props.headerComponet, props.headerScrolledComponent
   
   const [requsetType, setRequsetType] = useState("ALBUMS");
   const [page, setPage] = useState(API.startPage);
@@ -44,7 +44,7 @@ export default function App(props) {
       {comments.length > 0 && (
         <CommentList
           heightOfComponent={props.heightOfComponent} 
-          headerComponet={props.headerComponet} 
+          headerScrolledComponent={props.headerScrolledComponent}
           hasMore={hasMore} 
           isLoading={isLoading} 
           loadMore={loadMore} 

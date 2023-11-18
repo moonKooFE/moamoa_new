@@ -17,6 +17,15 @@ import ManagingFolderModal from "./pages/PrivateFolder/ManagingFolderModal";
 import MemberManageModal from "./pages/PrivateFolder/MemberManageModal";
 import ModifyAlbumModal from "./pages/PrivateFolder/ModifyAlbumModal";
 
+// mypage
+import MyPage from "./pages/Mypage/myPage";
+import ChangeProfile from "./pages/Mypage/changeprofile";
+import ChangePW from "./pages/Mypage/changepassword";
+import Inquiry from "./pages/Mypage/inquiry";
+import Secossion from "./pages/Mypage/secession";
+import Terms from './pages/Mypage/Terms';
+import Privacy from './pages/Mypage/Privacy';
+
 // 임시 로그인
 import LogInForTest from "./pages/LoginForTest/loginpage2"
 
@@ -24,7 +33,7 @@ function App(){
   return (
     <BrowserRouter>
     <Routes>
-    <Route path="/" element={<Onboard/>}/>
+    <Route path="/" element={<Random/>}/>
       <Route path="/Onboard" element={<Onboard/>}/>
       <Route path="/FileUpload" element={<FileUpload/>}/>
       <Route path="/Random" element={<Random/>}/>
@@ -41,6 +50,15 @@ function App(){
       <Route path="/ManagingFolderModal" element={<ManagingFolderModal/>}/>
       <Route path="/MemberManageModal" element={<MemberManageModal/>}/>
       <Route path="/ModifyAlbumModal" element={<Escape/>}/>
+
+      {/* 마이페이지 */}
+      <Route path="/mypage" element={<MyPage/>}/> 
+      <Route path="/changeprofile" element={<ChangeProfile/>}/>
+      <Route path="/changepassword" element={<ChangePW/>}/>
+      <Route path="/inquiry" element={<Inquiry/>}/>
+      <Route path="/secession" element={<Secossion/>}/>
+      <Route path="/terms" element={<Terms/>}></Route>
+      <Route path="/privacy" element={<Privacy/>}></Route>
       
       <Route path="/LogInForTest" element={<LogInForTest/>}/>
     </Routes>

@@ -1,6 +1,6 @@
-.ROLE_ADMIN {
-    width: 22vh;
-    height: 22vh;
+.ROLE_ADMIN, .ROLE_USER{
+    width: 41.67vw;
+    height: 41.67vw;
     object-fit: cover;
     overflow-x:hidden;
     margin: 0.2vh;
@@ -8,24 +8,13 @@
     font-size: 1.2vh;
   }
 
-  .ROLE_USER {
-    width: 40vh;
-    height: 50vh;
-    object-fit: cover;
-    overflow-x:hidden;
-    padding: 0.1vh;
-    margin-bottom: 0vh; 
-    border-radius: 20px;
-    font-size: 1.2vh;
-  }
-
   .ALBUMS {
-    width: 21vh;
-    height: 21vh;
+    width: 41.67vw;
+    height: 41.67vw;
     object-fit: cover;
-    overflow-x:hidden;
+    overflow-x: hidden;
     padding: 0;
-    background-color: rgba(55, 55, 55, 0.2);
+    background-color: black;
     border-radius: 20px;
     font-size: 1.2vh;
   }
@@ -34,6 +23,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1vh;
+    margin-bottom: 0.63vh;
+  }
+
+  .eachAlbum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25.37vh;
+  }
+
+  .eachAlbum>div{
+    margin-top: 1.38vh;
+    font-size: 1.75vh;
   }
   

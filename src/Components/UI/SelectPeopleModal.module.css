@@ -1,0 +1,147 @@
+@import url("../../Global.css");
+
+.Modal {
+  position:fixed;
+  top:0;
+  z-index: 1;
+  text-align: center;
+  color : white;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Pretendard-Regular';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ModalBackground{
+  position:absolute;
+  background-color: black;
+  opacity: 40%;
+  height: 100vh;
+  width: 100%;
+}
+
+.ModalArea{
+  position: fixed;
+  bottom: 0vh;
+  transition: 0.25s;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  height: 45vh;
+  border-radius: 12px 12px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.inflow2Title{
+  font-size: 2.5vh;
+  height: fit-content;
+  font-family: 'Pretendard-SemiBold';
+}
+
+.inflow2Script{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3vh;
+  padding-right: 10vh;
+  height: 10vh;
+  width: 30vh;
+}
+
+.inflow2ScriptFirst{
+  font-size: 3vh;
+  font-family: 'Pretendard-SemiBold';
+  text-align: left;
+  color:black;
+}
+
+.inflow2ScriptSecond{
+  font-size: 1.7vh;
+  color:black;
+  opacity: 70%;
+  text-align: left;
+}
+
+.peopleContainer{
+  box-sizing: border-box;
+  width: 35vh;
+  height: 7vh;
+  border: 1.5px solid #CECECE;
+  border-radius: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4vh;
+}
+
+.plus{
+  background-image: url("../../Assets/plus.png");
+  background-repeat: no-repeat;
+  background-size: 2.5vh;
+  background-position: center;
+  height: 7vh;
+  width: 14vh;
+  margin-left: 8vh;
+}
+
+.minus{
+  background-image: url("../../Assets/minus.png");
+  background-repeat: no-repeat;
+  background-size: 2vh;
+  background-position: center;
+  height: 7vh;
+  width: 14vh;
+  margin-right: 8vh;
+}
+
+.peoples{
+  color: #1C1B1F;
+}
+
+.rangeError{
+  font-size: 1.7vh;
+  color: red;
+  margin: 2vh;
+}
+
+.randBtn, .randBtnDisabled{
+  width: 40vh;
+  height: 7vh;
+  text-align: center;
+  line-height: 7vh;
+  border-style: none;
+  background: #1C66FD;
+  border-radius: 16px;
+  font-size: 2.2vh;
+  color: white;
+  text-decoration: none;
+  font-family: 'Pretendard-SemiBold';
+}
+
+.randBtnDisabled{
+  background: #E4E4E4;
+}
+.footer{
+  width: 42vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+.canselBtn{
+  color: #D8D8D8;
+  padding: 1.5vh 0vh 1.5vh 0vh;
+  width: 10vh;
+}
+.viewPoseBtn{
+  background-color: #1C66FD;
+  border-radius: 6px;
+  padding: 1.5vh 0vh 1.5vh 0vh;
+  width: 30vh;
+}
+

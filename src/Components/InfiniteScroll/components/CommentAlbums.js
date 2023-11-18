@@ -17,7 +17,7 @@ export default function Comment({ mesureRef, comment, commentType }) {
   }
 
   return (
-    <div className="eachRandomPhoto">
+    <div className="eachAlbum">
       <img loading="lazy" className={classType} ref={mesureRef} src={imgUrl} onClick={openAlbum}></img>
       <div>{comment.name}</div>
     </div>

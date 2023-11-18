@@ -8,27 +8,38 @@
 }
 
 .tap2Header{
-  height: 7vh;
+  height: 9.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tap2HeaderTitle{
-  font-family: 'Pretendard-Medium';
-  font-size: 2vh;
+  font-family: 'Pretendard-Regular';
+  font-size: 2.25vh;
+}
+
+.tap2HeaderTitle>span{
+  font-family: 'Pretendard-SemiBold';
 }
 
 .createAlbum{
   position:absolute;
-  /* background-image: url('../../resource/img/mainPage/createAlbumBtn_k.png'); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 3vh;
   background-color: #1C66FD;
   border-radius: 10vh;
-  width: 7.5vh;
-  height: 7.5vh;
-  bottom: 5vh;
-  right: 2vh;
+  width: 17.78vmin;
+  max-width: 64px;
+  height: 17.78vmin;
+  max-height: 64px;
+  bottom: 7.25vh;
+  right: 3.33vw;
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createAlbum > img {
+  width: 2.88vh;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
 }

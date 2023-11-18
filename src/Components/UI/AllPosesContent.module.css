@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color : black;
   width: 100%;
   font-family: 'Pretendard-Regular';
 }
@@ -49,14 +48,8 @@
 }
 
 .selectPeople{
-  /* Rectangle 1470 */
-  width: 12vh;
   text-align: center;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 5vh;
-  padding: 1vh 0vh 1vh 0vh;
-  margin-right: 2.5vh;
+  font-size: 1.75vh;
   font-family: 'Pretendard-Regular';
 }
 

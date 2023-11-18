@@ -13,23 +13,28 @@ import client from "../../Client"
 import AllposesContent from "../../Components/UI/AllposesContent";
 import AlbumsIS from "../../Components/InfiniteScroll/AlbumsIS";
 import LogoImg from "../../Assets/moamoa.svg"
-// import PhotoModal from "./PhotoModal";
+import DefaultProfile from "../../Assets/defaultImg.png"
+import createAlbumImg from "../../Assets/AddAlbum.svg";
+import PhotoModal from "./PhotoModal";
 
-const TabMenu = styled.div`  
+const TabMenu = styled.div`
+  margin-top: 2.88vh;
   color: black;
   font-weight: bold;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   list-style: none;
   width: 100%;
 
   .submenu {
     // 기본 Tabmenu 에 대한 CSS를 구현
 
+    height : 7vh;
     text-align: center;
-    width: calc(100% / 2);
-    padding: 2vh;
+    line-height: 7vh;
+    width: 47.28%;
     font-size: 1.7vh;
     border-bottom: 0.1vh solid white;
     font-size: 2.2vh;
@@ -46,7 +51,7 @@ const MainPage = (props) => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
   const [token, setToken] = useState(sessionStorage.getItem('token'));
-  const [userIcon, setUserIcon] = useState(LogoImg);
+  const [userIcon, setUserIcon] = useState(DefaultProfile);
 
   useEffect(()=>{
     client.defaults.headers.common['Authorization'] = token;
@@ -88,12 +93,16 @@ const MainPage = (props) => {
     clickTab(index);
   };
 
+  const handleImageError = (event) => {
+    event.target.src = DefaultProfile;
+  };
+
   if(isLogin){
     return (
       <div className={styles.App}>
           <div className={styles.topNav}>
             <img className={styles.logo} src={LogoImg}></img>
-            <img loading="lazy" className={styles.userIcon} src={userIcon} onClick={()=>navigate('/mypage')}></img>
+            <img loading="lazy" className={styles.userIcon} src={userIcon} onError={handleImageError} onClick={()=>navigate('/mypage')}></img>
           </div>
           <TabMenu>
             {/*아래 하드코딩된 내용 대신에, map을 이용한 반복으로 코드를 수정
@@ -124,12 +133,6 @@ const MainPage = (props) => {
 export default MainPage;
 
 const Tap1 = (props) => {
-  const [Tap1headerComponet, setTap1headerComponet] = useState(
-    <div className={stylesTap1.tap1Header}>
-      <div className={stylesTap1.tap1HeaderTotal}>총 00개</div>
-      <div className={stylesTap1.tap1HeaderPeople}>인원수▾</div>
-    </div>
-  );
 
   const [modal1, setModal1] = useState(false);
 
@@ -140,7 +143,7 @@ const Tap1 = (props) => {
   
   return(
     <div className={stylesTap1.Tap1}>
-      {/* {modal1 ? <PhotoModal modalState={modalState} modal={modal1}/>: null} */}
+      {modal1 ? <PhotoModal modalState={modalState} modal={modal1}/>: null}
       <div className={stylesTap1.Banner} onClick={modalState}>
         <div>
           <div className={stylesTap1.BannerDiv1}>무슨 포즈할 지 고민될 때는?</div>
@@ -148,7 +151,7 @@ const Tap1 = (props) => {
         </div>
         <div className={stylesTap1.BannerImg}></div>
       </div>
-      <AllposesContent height='57.5vh'/>
+      <AllposesContent height='57vh'/>
     </div>
   )
 }
@@ -156,7 +159,7 @@ const Tap1 = (props) => {
 const Tap2 = (props) => {
   const [Tap2headerComponent, setTap2headerComponent] = useState(
     <div className={stylesTap2.tap2Header}>
-      <div className={stylesTap2.tap2HeaderTitle}>{sessionStorage.getItem("nickname")}님의 추억</div>
+      <div className={stylesTap2.tap2HeaderTitle}><span>{sessionStorage.getItem("nickname")}</span>님의 추억</div>
     </div>
   );
 
@@ -172,8 +175,10 @@ const Tap2 = (props) => {
     <div className={stylesTap2.Tap2}>
       { /* modal 인터페이스 */}
       { modal == true ? <PhotoAlbumModal modalState={modalState} /> : null } 
-      <AlbumsIS heightOfComponent={'73.5vh'} headerComponent={Tap2headerComponent}/>
-      <div className={stylesTap2.createAlbum} onClick={()=>{setModal(!modal)}}></div>
+      <AlbumsIS heightOfComponent={'79vh'} headerScrolledComponent={Tap2headerComponent}/>
+      <div className={stylesTap2.createAlbum} onClick={()=>{setModal(!modal)}}>
+        <img src={createAlbumImg}/>
+      </div>
     </div>
   )
 }

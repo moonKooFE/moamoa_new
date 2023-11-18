@@ -16,7 +16,7 @@ const PhotoModal = (props) => {
         
         .then(function(res) {
             setImgUrl(res.data.response.image);
-            setTop(15);
+            setTop(17.25);
             console.log(sessionStorage.getItem('people'))
             
         })
@@ -28,7 +28,7 @@ const PhotoModal = (props) => {
         });
     }, [])
     return(
-        <div className={styles.Modal}>
+        <div className={styles.Modals}>
             <div className={styles.ModalBackground} onClick={props.modalState}></div>
             <div className={styles.ModalArea} style={{top : top+'vh'}}>
                 <div className={styles.imageArea}>

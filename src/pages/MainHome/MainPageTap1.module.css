@@ -8,7 +8,7 @@
 
 .Banner{
     color: black;
-    height: 15vh;
+    height: 12.5vh;
     background-color: #F3F3F3;
     opacity: 90%;
     display: flex;
@@ -28,9 +28,9 @@
 
 .BannerImg{
     margin-top: 4vh;
-    width: 10vh;
-    height: 10vh;
-    /* background-image: url("../../resource/img/mainPage/BannerImg_k.png"); */
+    width: 8.25vh;
+    height: 8.25vh;
+    background-image: url("../../Assets/boxWithHand.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

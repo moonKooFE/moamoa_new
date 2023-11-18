@@ -5,7 +5,7 @@ import "./CommentList.css";
 
 export default function CommentList({
   heightOfComponent,
-  headerComponent,
+  headerScrolledComponent,
   hasMore,
   isLoading,
   loadMore,
@@ -23,7 +23,7 @@ export default function CommentList({
 
   return (
     <div className="comment-list" style={{height:heightOfComponent}}>
-      <div>{headerComponent}</div>
+      <div style={{width:'100%'}}>{headerScrolledComponent}</div>
       {comments.map((comment, index) => {
         if (index === comments.length - 1) {
           return (
