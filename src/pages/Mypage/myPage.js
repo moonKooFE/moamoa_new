@@ -3,7 +3,11 @@ import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { useNavigate,BrowserRouter as Router } from "react-router-dom";
 import LogoutModal from "./logoutModal";
+import BlueScreen from "../../Assets/BlueScreen.png";
 function App(props){
+    const Alter = (event) => {
+        event.target.src=BlueScreen;
+    }
     const navigate = useNavigate();
     let goBack = () => {
         navigate(-1);
@@ -21,7 +25,7 @@ function App(props){
                 <button className={styles.arrow6} onClick={goBack}/>
                 <p className={styles.mypagetitle}>마이페이지</p>
                 <div style={{display:'flex'}} onClick={()=>navigate("/changeprofile")}>
-                    <img loading="lazy" className={styles.userimage} src={sessionStorage.getItem("image")}></img>
+                    <img loading="lazy" className={styles.userimage} onError={Alter}src={sessionStorage.getItem("image")}></img>
                     <p className={styles.username}>{sessionStorage.getItem("nickname")}님</p>
                 </div>
             </div>

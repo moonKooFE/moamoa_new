@@ -1,0 +1,19 @@
+.commentList {
+  width: calc(100% - 6.67% - 6.67%);
+  overflow-x:hidden;
+  list-style-type: none;
+  margin-top: -0.11vh;
+  padding: 0;
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  padding-left: 6.67%;
+  padding-right: 6.67%;
+}
+
+.commentList>:first-child{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -9,23 +9,21 @@
 
 .box4{
     position: fixed;
-    top: 5vh;
+    top: 5.5vh;
     background-color: white;
     width: 100%;
-    height: 9.26vh;
+    height: 11.26vh;
     display: flex;
     align-items: center;
     justify-content:space-between;
-    
 }
 
 .arrow2{
     width: 3.24vh;
     height: 3.24vh;
-    margin-left: 3vh;
+    margin-left: 2.5vh;
 }
 .username2 {
-    
     color: black;
     font-size: 3vh;
     text-align: center;
@@ -33,8 +31,7 @@
     height: fit-content;
 }
 .trash {
-   margin-right: 3vh;
+    margin-right: 3vh;
     width: 2.5vh;
     height: .5vh;
-    
 }

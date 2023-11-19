@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 import Comment from "./CommentPhotos";
-import "./CommentList.css";
+import styles from "./CommentListPhotos.module.css";
 import PlusBtn from "./PlusBtn";
 
 export default function CommentList({
@@ -25,7 +25,7 @@ export default function CommentList({
   }, [isIntersecting, hasMore, loadMore]);
 
   return (
-    <div className="comment-list" style={{height:heightOfComponent}}>
+    <div className={styles.commentList} style={{height:heightOfComponent}}>
       <div>
         <PlusBtn modalState1={modalState1} />
       </div>

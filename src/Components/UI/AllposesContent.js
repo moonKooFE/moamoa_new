@@ -19,11 +19,11 @@ const TabMenu = styled.div`
   align-items: center;
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
-  padding-left: 5.38vw;
+  padding-left: 5.7vw;
   padding-right: 9.44vw;
   justify-content: space-between;
   list-style: none;
-  width: calc(100% - 5.38% - 9.44%);
+  width: calc(100% - 5.7% - 9.44%);
   background-color:white;
 
   .submenu {
@@ -31,9 +31,10 @@ const TabMenu = styled.div`
     text-align : center;
     height: 4.5vh;
     line-height: 4.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border-radius : 5vh;
+    padding-left: 1.6vh;
+    padding-right: 1.6vh;
+    margin-right: 0.83vw;
+    border-radius : 2vh;
     font-size: 1.75vh;
     transition : 0.5s;
     font-family: 'Pretendard-Medium';
@@ -96,7 +97,7 @@ const App = (props) => {
                 ))}
                 </span>
                 <div className={styles.selectPeople} onClick={modalState}>
-                  { sessionStorage.getItem('people') === undefined || init ? <div>인원수<img src={VectorForSelcectPeople}/></div> : <div style={{textDecoration:"underline"}}>#{sessionStorage.getItem('people')}명이서</div> }
+                  { sessionStorage.getItem('people') === undefined || init ? <div>인원수<img style={{marginLeft:"0.83vw"}} src={VectorForSelcectPeople}/></div> : <div style={{textDecoration:"underline"}}>#{sessionStorage.getItem('people')}명이서</div> }
                 </div>
             </TabMenu>
             <div className={currentTab == 0 ? styles.borderL : styles.borderR}></div>

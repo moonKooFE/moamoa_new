@@ -25,59 +25,60 @@
   .ModalArea{
     position : absolute;
     left: calc((100% - 39vh)/2);
-    top: 17.77vh;
+    top: 18vh;
     transition: 0.25s;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     z-index: 1;
     width: 39vh;
-    height: 64vh;
+    height: 63.5vh;
     max-height: 70vh;
     border-radius: 1.5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    overflow-y: scroll;
   }
 
   .imgArea{
-    width: 90%;
-    max-height: 55vh;
+    width: 33vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 3vh;
-    
+    margin-top: -.3vh;
   }
 
   .image {
-    max-width: 90%;
-    max-height: 55vh;
-    object-fit: contain;
-    overflow-x:hidden;
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit:cover;
+    overflow-x: hidden;
     padding: 0.1vh;
-    border-radius: 20px;
     font-size: 1.2vh;
   }
 
   .trashCan{
     position: relative;
-    margin-left: 30vh;
+    margin-left: 30.88vh;
     width: 2vh;
-    height: 2.22vh;
+    height: 2.25vh;
     background-size: contain;
-    margin-top: 8.25vh;
+    margin-top: 6.88vh;
   }
 
   .title{
-    margin-bottom: 0.88vh;
-    font-size: 2.13vh;
+    font-size: 2.5vh;
     font-family: "HakgyoansimWoojuR";
-    margin-top: -1.63vh;
+    margin-top: -1.93vh;
   }
 
   .date{
-    font-size: 1.25vh;
+    font-size: 1.5vh;
     font-family: "HakgyoansimWoojuR";
     color: #808080;
     margin-bottom: 4.13vh;
+    /* margin-top: -.1vh; */
+    margin-top: 1vh;
   }

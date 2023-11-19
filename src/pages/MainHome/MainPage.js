@@ -15,12 +15,12 @@ import AlbumsIS from "../../Components/InfiniteScroll/AlbumsIS";
 import LogoImg from "../../Assets/moamoa.svg"
 import DefaultProfile from "../../Assets/defaultImg.png"
 import createAlbumImg from "../../Assets/AddAlbum.svg";
-import PhotoModal from "./PhotoModal";
+import PhotoModal from "../../Components/UI/PhotoModal";
+import Albums from "../../Assets/albums.png";
 
 const TabMenu = styled.div`
   margin-top: 2.88vh;
   color: black;
-  font-weight: bold;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -134,16 +134,36 @@ export default MainPage;
 
 const Tap1 = (props) => {
 
+  const [imgUrl, setImgUrl] = useState("");
+  const [people, setPeople] = useState(1);
   const [modal1, setModal1] = useState(false);
 
+
+  // 모달창을 호출하기 전에 랜덤이미지를 get요청
   const modalState = () => {
+    if (sessionStorage.getItem('people') !== null) {
+        setPeople(sessionStorage.getItem('people'));
+    }
+    client.get('/poses/random?peopleCount=' + people)
+      .then(function(res) {
+          setImgUrl(res.data.response.image);
+      })
+      .catch(function(err) {
+          //console.log(err);
+          //props.modalState();
+      }).finally(function() {
+
+      });
+
     setModal1(!modal1);
   }
   
   
   return(
     <div className={stylesTap1.Tap1}>
-      {modal1 ? <PhotoModal modalState={modalState} modal={modal1}/>: null}
+
+
+      {modal1 ? <PhotoModal modalState={modalState} modal={modal1} imgUrl={imgUrl}/>: null}
       <div className={stylesTap1.Banner} onClick={modalState}>
         <div>
           <div className={stylesTap1.BannerDiv1}>무슨 포즈할 지 고민될 때는?</div>
@@ -166,16 +186,38 @@ const Tap2 = (props) => {
   //console.log(decodeJWT.parseJwt(sessionStorage.getItem('token')));
 
   const [modal, setModal] = useState(false);
+  const [album,setAlbum] = useState([0]);
 
   const modalState = () => {
     setModal(!modal);
   }
 
+  useEffect(() => {
+    client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+    client.get("/albums", {
+      params: { page : 0 }
+    }).then(function(res){
+      // console.log(res);
+      setAlbum(res.data.response);
+    }).catch(function(err){
+      // console.log(err);
+    });
+  }, [])
+
   return(
     <div className={stylesTap2.Tap2}>
       { /* modal 인터페이스 */}
       { modal == true ? <PhotoAlbumModal modalState={modalState} /> : null } 
-      <AlbumsIS heightOfComponent={'79vh'} headerScrolledComponent={Tap2headerComponent}/>
+      { album.length === 0 
+      ? <div className={stylesTap2.bg}>
+        {Tap2headerComponent}
+        <img src={Albums} className={stylesTap2.albumimg}/>
+        <div className={stylesTap2.comment1}>아직 사진첩이 없어요</div>
+        <div className={stylesTap2.comment2}>화면 아래 사진첩 아이콘을 눌러</div>
+        <div className={stylesTap2.comment2}>소중한 사람들과 추억을 공유해보세요!</div> 
+      </div>
+      
+      : <AlbumsIS heightOfComponent={'79vh'} headerScrolledComponent={Tap2headerComponent}/>}
       <div className={stylesTap2.createAlbum} onClick={()=>{setModal(!modal)}}>
         <img src={createAlbumImg}/>
       </div>

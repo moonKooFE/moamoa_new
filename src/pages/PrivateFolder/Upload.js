@@ -1,9 +1,11 @@
 import styles from "./Upload.module.css";
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import plus from "../../Assets/plus2.png";
+import plus from "../../Assets/plusForFileUpload.svg";
+import controller from "../../Assets/controller.svg";
 import client from "../../Client";
 import imageCompression from "browser-image-compression";
+import close from "../../Assets/close2.png";
 
 function App(props) {
     //props.albumId
@@ -131,11 +133,13 @@ function App(props) {
     <div className={styles.App}>
       <div className={styles.App1} onClick={props.modalState1}></div>
       <div className={styles.App2}>
-        <div className={styles.controler}></div>
-        <div className={styles.close} onClick={props.modalState1}></div>
-        <form onSubmit={onSubmitHandler}>
+        <img className={styles.controller} src={controller}></img>
+        <div className={styles.closeArea}>
+          <img className={styles.close} src={close} onClick={props.modalState1}></img>
+        </div>
+        <form className={styles.addPhotoForm} onSubmit={onSubmitHandler}>
         <div className={styles.box6}>
-          <p className={styles.addname}>사진 추가하기</p>
+          <div className={styles.addname}>사진 추가하기</div>
           <div className={styles.box5}>
             <div className={styles.folder}>
               <label htmlFor="plus4" className={styles.folder2}>
@@ -169,10 +173,7 @@ function App(props) {
           </div>
         </div>
         <div className={styles.block2}>
-          <div className={styles.name}>
-            <div>제목</div>
-            <div>인원 수</div> 
-          </div>
+          <div className={styles.name}>제목</div>
           <div className={styles.box7}>
             <input
               type="text"
@@ -182,7 +183,16 @@ function App(props) {
               placeholder="ex.수용이와 석진이"
               required
             ></input>
-            <div>
+          </div>
+          <div className={styles.name1}>날짜</div>
+          <div className={styles.box7}>
+            <input type="date" className={styles.date} value={date} onChange={handleDateChange} required></input>
+          </div>
+          <div className={styles.name3} >
+            인원수
+          </div>
+          <div>
+          <div className={styles.box8}>
               <input
                 type="number"
                 className={styles.number}
@@ -193,17 +203,14 @@ function App(props) {
                 onChange={handleNumChange}
                 required
               ></input>
+              <div className={styles.setPublicArea}>
+              공개하기
+                <label className={styles.switch}>
+                  <input type="checkbox" onChange={handleOptionChange}/>
+                  <span className={styles.slider}></span>
+                </label>
+              </div>
             </div>
-          </div>
-          <p className={styles.name1} >날짜</p>
-          <div className={styles.box7}>
-            <input type="date" className={styles.date} value={date} onChange={handleDateChange} required></input>
-          </div>
-          <div className={styles.name3} >사진 공개하기
-            <label className={styles.switch}>
-              <input type="checkbox" onChange={handleOptionChange}/>
-              <span className={styles.slider}></span>
-            </label>
           </div>
 
         </div>

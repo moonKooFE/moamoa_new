@@ -50,9 +50,10 @@
 }
 
 .inflow2ScriptFirst{
-  font-size: 3.6vh;
+  font-size: 3.75vh;
   font-family: 'Pretendard-SemiBold';
   margin-bottom: 2.37vh;
+  margin-top: 0.7vh;
   
 }
 
@@ -61,7 +62,7 @@
   color:black;
   opacity: 50%;
   font-family: "Pretendard-Light";
-  
+  margin-top: 0.38vh;
 }
 
 .peopleContainer{
@@ -92,10 +93,11 @@
   border-style: none;
   background: #1C66FD;
   border-radius: 16px;
-  font-size: 2.2vh;
+  font-size: 2.25vh;
   color: white;
   text-decoration: none;
-  font-family: 'Pretendard-SemiBold';
+  font-family: 'Pretendard-Medium';
+  margin-top: -.38vh;
 }
 
 .randBtnDisabled{

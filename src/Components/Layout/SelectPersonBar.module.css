@@ -47,7 +47,7 @@
     color: white;
     text-decoration: none;
     font-family: 'Pretendard-SemiBold';
-    margin-top: 31.75vh;
+    margin-top: 32vh;
     
   }
   .randBtnDisabled{
@@ -62,7 +62,8 @@
     color: white;
     text-decoration: none;
     font-family: 'Pretendard-SemiBold';
-    margin-top: 32.25vh;
+    margin-top: 32vh;
+
   }
 .buttonBg{
     margin-right:1.67%;
