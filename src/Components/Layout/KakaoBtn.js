@@ -4,8 +4,7 @@ import KakaoIcon from '../../Assets/kakaoicon.png';
 const KakaoBtn = (props) => {
     const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
     const REDIRECT_URI = process.env.REACT_APP_RURL;
-    //const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-    const KAKAO_AUTH_URI = `http://localhost:3000/LogInForTest`;
+    const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
     return (
         <a href={KAKAO_AUTH_URI} className={styles.kbutton} onClick={props.onClick}>
           <div className={styles.icon1}>

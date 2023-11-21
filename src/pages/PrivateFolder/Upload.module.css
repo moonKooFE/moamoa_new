@@ -20,6 +20,7 @@
     background-color: white;
     position: fixed;
     bottom: 0;
+    height: 98.25vh;
     width: 100%;
     border-radius: 1vh;
     display: flex;
@@ -29,14 +30,15 @@
 }
 
 .controller {
-    width: 3.5vh;
-    margin-top: 2vh;
+    width: 7.78vw;
+    margin-bottom: -0.15vh;
 }
 
 .closeArea{
-    width: 100%;
+    width: calc(100vw - 6.39vw);
     height: 2vh;
-    margin-right: 4.17vw;
+    margin-right: 3.89vw;
+    margin-bottom: -0.5vh;
     text-align: end;
 }
 
@@ -59,7 +61,7 @@
     font-size: 2vh;
     margin-top: 0vh;
     font-family:'Pretendard-SemiBold';
-    margin-bottom: 3.5vh;
+    margin-bottom: 3.3vh;
 }
 
 .box5 {
@@ -117,7 +119,7 @@
 .pictureupload {
     text-align: center;
     position: relative;
-    top: -13vh;
+    top: -15.13vh;
     color: #DADADA;
     z-index: 1998;
     font-size: 1.8vh;
@@ -138,27 +140,38 @@
 }
 
 .name{
-    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
 }
 
-.name1, .name3{
-    margin-top: 2.13vh;
+.name3{
+    margin-top: 2vh;
 }
+
+
 
 .name, .name1, .name3 {
     font-size: 2vh;
-    color: #48505C;
+    color: #303235;
     margin-left: 8.89%;
-    margin-bottom: 1vh;
+    
     font-family: "Pretendard-SemiBold";
     display: flex;
     justify-content: space-between;
 }
 
+.name1{
+    margin-bottom: 0.88vh;
+    margin-top: 1.88vh;
+}
+
+.name3{
+    margin-bottom: 2vh;
+}
 
 .box7 {
     width: 85.28%;
-    height: 6.13vh;
+    height: 6vh;
     border: 1px solid #DADADA;
     border-radius: 2vh;
     margin: auto;
@@ -189,7 +202,7 @@
 
 .number {
     width: 34.17vw;
-    height: 6.13vh;
+    height: 5.63vh;
     text-align: center;
     border: 1px solid #DADADA;
     border-radius: 1.88vh;
@@ -203,13 +216,14 @@
 }
 
 .date {
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-size: 2.2vh;
+    margin: auto;
 }
 
 .block2 {
-   margin-bottom: 3vh; 
+   margin-bottom: 4.75vh; 
 }
 
 input {
@@ -262,6 +276,8 @@ input {
     display: flex;
     font-size: 2vh;
     justify-content: space-between;
+    color: #ccc;
+    line-height: 2.2vh;
 }
 
 .switch {

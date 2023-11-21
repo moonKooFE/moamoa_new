@@ -1,11 +1,17 @@
 import styles from './GeneralBtn.module.css';
+import { useEffect, useState } from 'react';
 
-const SignUpBtn = (props) => {
-   
+const GeneralBtn = (props) => {
+    const [btnWidth, setWidth] = useState('41vh');
+
+    useEffect(()=>{
+        if(props.width !== undefined)
+            setWidth(props.width);
+    }, [])     
     return(
-        <button className={styles.active} type='submit' onClick={props.onClick}>
+        <button style={{width:btnWidth}} className={styles.active} type='submit' onClick={props.onClick}>
             <span>{props.title}</span>
         </button>
     )
 };
-export default SignUpBtn;
+export default GeneralBtn;

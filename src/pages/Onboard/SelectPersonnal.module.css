@@ -1,27 +1,20 @@
 @import url("../../Global.css");
 
-.App2 {
+.App {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color : black;
   height: 100vh;
   width: 100%;
   font-family: 'Pretendard-Regular';
-}
-
-.backnavbar{
-  margin-top: 10.13vh;
-}
-
-.content{
-  height: 85vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.backnavbar{
+  height: 14.01vh;
+  display: flex;
+  align-items: end;
 }
 
 .invisibleNav2 {
@@ -35,13 +28,11 @@
   /* border-bottom: white solid 1px; */
 }
 
-
-
 .inflow2Script{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 9.5vh;
+  margin-top: 8.5vh;
   margin-bottom: 7.75vh;
   padding-right: 10vh;
   height: 10vh;
@@ -103,5 +94,3 @@
 .randBtnDisabled{
   background: #E4E4E4;
 }
-
-

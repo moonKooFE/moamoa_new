@@ -1,5 +1,5 @@
 .plusBtn{
-    margin-top: 12.26vh;
+    margin-top: 1.13vh;
     width: 7vh;
     height: 7vh;
     background-color: #1C66FD;
@@ -8,8 +8,12 @@
     justify-content: center;
     border-radius: 50%;
     margin-bottom: 4.13vh;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
 }
 .plus{
     width: 3vh;
     height: 3vh;
 }
+
+
+

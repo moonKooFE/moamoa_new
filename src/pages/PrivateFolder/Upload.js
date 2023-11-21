@@ -7,6 +7,8 @@ import client from "../../Client";
 import imageCompression from "browser-image-compression";
 import close from "../../Assets/close2.png";
 
+const adminId = 7;
+
 function App(props) {
     //props.albumId
     const [albumId, setAlbumId] = useState(props.albumId); // id
@@ -87,7 +89,9 @@ function App(props) {
     }
 
     const handleOptionChange = (event) => {
-      setOpen(!open);
+      console.log(sessionStorage.getItem('id'));
+      if(sessionStorage.getItem('id') === adminId)
+        setOpen(!open);
     }
 
     
@@ -203,10 +207,16 @@ function App(props) {
                 onChange={handleNumChange}
                 required
               ></input>
+              {}
               <div className={styles.setPublicArea}>
-              공개하기
+              공개하기<br/>
+              (기능 준비중)
                 <label className={styles.switch}>
-                  <input type="checkbox" onChange={handleOptionChange}/>
+                  {
+                    sessionStorage.getItem('id') == adminId ?
+                    <input type="checkbox" onChange={handleOptionChange}/> :
+                    <input type="checkbox" onChange={handleOptionChange} disabled/>
+                  }
                   <span className={styles.slider}></span>
                 </label>
               </div>

@@ -38,7 +38,7 @@ export default function App(props) {
   }, []);
 
   return (
-    <div className="photosApp" style={{width:'100%', marginTop:'6vh'}}>
+    <div className="photosApp" style={{width:'100%'}}>
       {props.headerComponent}
       {comments.length >= 0 && (
         <CommentList

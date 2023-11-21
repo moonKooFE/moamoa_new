@@ -4,7 +4,6 @@
     border: none;
     background-color: #1C66FD;
     color: white;
-    width:39vh;
     height: 7vh;
     display: flex;
     justify-content: space-around;
@@ -14,5 +13,3 @@
     font-size: 2.25vh;
     line-height: 1vh;
   }
-
-  

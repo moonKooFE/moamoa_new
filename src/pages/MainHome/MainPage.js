@@ -6,6 +6,7 @@ import {
   React,
   useState,
   useEffect,
+  useRef
 } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PhotoAlbumModal from "./PhotoAlbumModal";
@@ -17,6 +18,7 @@ import DefaultProfile from "../../Assets/defaultImg.png"
 import createAlbumImg from "../../Assets/AddAlbum.svg";
 import PhotoModal from "../../Components/UI/PhotoModal";
 import Albums from "../../Assets/albums.png";
+import SessionExpiration from "../../Components/Function/SessionExpiration";
 
 const TabMenu = styled.div`
   margin-top: 2.88vh;
@@ -53,27 +55,38 @@ const MainPage = (props) => {
   const [token, setToken] = useState(sessionStorage.getItem('token'));
   const [userIcon, setUserIcon] = useState(DefaultProfile);
 
-  useEffect(()=>{
-    client.defaults.headers.common['Authorization'] = token;
-    client.get('/users?nickname=asdf')
-    .then(function(res) {
-      //console.log("로그인 인증 성공");
-      setIsLogin(true);
-      sessionStorage.setItem('category', 'ROLE_ADMIN');
-      setUserIcon(sessionStorage.getItem('image'));
-    }).catch(function(err){
-      if(err.response.status == "401"){
-        // alert("로그인 세션이 만료되었습니다. 다시 로그인 해주세요.");
-        // sessionStorage.clear();
-        // client.defaults.headers.common['Authorization'] = undefined;
-        // setIsLogin(false);
-        // navigate('/onBoard');
-        setIsLogin(true);
-      } else {
-        setIsLogin(true);
+  //스왑 이벤트 처리
+  const touchStartX = useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX.current !== null) {
+      const currentX = e.touches[0].clientX;
+      const deltaX = currentX - touchStartX.current;
+      // 여기에서 deltaX를 이용하여 원하는 동작 수행
+
+      if (deltaX > 100) {
+        clickTab(0);
+      } else if (deltaX < -100) {
+        clickTab(1);
       }
-      //console.log(err);
-    });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    touchStartX.current = null;
+  };
+
+  //세션이 만료되었는지 검사
+  SessionExpiration();
+
+  useEffect(()=>{
+    sessionStorage.setItem('category', 'ROLE_ADMIN');
+    setUserIcon(sessionStorage.getItem('image'));
+    setIsLogin(true);
   }, []);
 
   const location = useLocation();
@@ -99,9 +112,11 @@ const MainPage = (props) => {
 
   if(isLogin){
     return (
-      <div className={styles.App}>
+      <div className={styles.App} onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}>
           <div className={styles.topNav}>
-            <img className={styles.logo} src={LogoImg}></img>
+            <img className={styles.logo} src={LogoImg} onClick={()=>{navigate('/Random')}}></img>
             <img loading="lazy" className={styles.userIcon} src={userIcon} onError={handleImageError} onClick={()=>navigate('/mypage')}></img>
           </div>
           <TabMenu>
@@ -138,23 +153,30 @@ const Tap1 = (props) => {
   const [people, setPeople] = useState(1);
   const [modal1, setModal1] = useState(false);
 
+  const setRandPose = () => { //rand pose를 설정하는 함수
+    if (sessionStorage.getItem('people') !== null) {
+      setPeople(sessionStorage.getItem('people'));
+    }
+    client.get('/poses/random?peopleCount=' + people)
+    .then(function(res) {
+        setImgUrl(res.data.response.image);
+    })
+    .catch(function(err) {
+        //console.log(err);
+        //props.modalState();
+    }).finally(function() {
+
+    });
+  }
+
+  useEffect(()=>{
+    setRandPose();
+  }, [])
+
 
   // 모달창을 호출하기 전에 랜덤이미지를 get요청
   const modalState = () => {
-    if (sessionStorage.getItem('people') !== null) {
-        setPeople(sessionStorage.getItem('people'));
-    }
-    client.get('/poses/random?peopleCount=' + people)
-      .then(function(res) {
-          setImgUrl(res.data.response.image);
-      })
-      .catch(function(err) {
-          //console.log(err);
-          //props.modalState();
-      }).finally(function() {
-
-      });
-
+    setRandPose();
     setModal1(!modal1);
   }
   

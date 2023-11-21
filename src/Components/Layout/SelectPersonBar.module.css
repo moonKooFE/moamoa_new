@@ -1,5 +1,11 @@
 @import url("../../Global.css");
 
+.SelectPersonBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .barline{
     border: 1px solid #E6E9EC;
     border-radius: 4.56vh;
@@ -7,34 +13,41 @@
     height: 7.63vh;
     display: flex;
     flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    margin-top: .5vh;
+}
+
+.minusArea, .plusArea{
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1vh;
-    margin-top: .5vh;
-    
-    
+    width: 10vh;
+    height: 7.63vh;
 }
+
 .minus{
     width: 1.5vh;
     height: 0.25vh;
 }
+
 .plus{
     width: 2.08vh;
     height: 2vh;
 }
+
 .count{
     font-size: 4vh;
     font-family: 'Pretendard-Regular';
-    margin-left: 11.63vh;
-    margin-right: 11.63vh;
-    
 }
+
 .rangeError{
     font-size: 1.7vh;
     color: red;
     margin-top: 2vh;
     margin-left: 2vh;
 }
+
 .randBtn{
     width: 41vh;
     height: 7vh;
@@ -48,8 +61,8 @@
     text-decoration: none;
     font-family: 'Pretendard-SemiBold';
     margin-top: 32vh;
-    
   }
+
   .randBtnDisabled{
     background: #E4E4E4;
     width: 41vh;
@@ -65,9 +78,11 @@
     margin-top: 32vh;
 
   }
+
 .buttonBg{
     margin-right:1.67%;
 }
+
 .rangecorrect{
     height: 2.05vh;
     margin-top: 2vh;

@@ -36,11 +36,15 @@ const SelectPersonBar = (props) => {
       navigate('/ShowRandPose');
     }
     return(
-        <div>
+        <div className={styles.SelectPersonBar}>
             <div className={styles.barline}>
-                <img className={styles.minus}src={minus} onClick={Counterm}/>
-                <div className={styles.count}>{person}</div>
-                <img className={styles.plus}src={Plus} onClick={Counterp}/>
+              <div className={styles.minusArea} onClick={Counterm}>
+                <img className={styles.minus}src={minus}/>
+              </div>
+              <div className={styles.count}>{person}</div>
+              <div className={styles.plusArea} onClick={Counterp}>
+                <img className={styles.plus}src={Plus}/>
+              </div>
             </div>
             {rangeerror ? <div className={styles.rangeError}>1 ~ 5명 이내로 선택해주세요</div> : <div className={styles.rangecorrect}/>}
             {

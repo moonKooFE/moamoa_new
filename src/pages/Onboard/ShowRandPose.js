@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import defaultImg from '../../Assets/OnboardMainImg.png';
 import reroll from '../../Assets/Reroll.svg';
 import client from '../../Client';
-//import LoginModal from "./recircleComponets/needLoginModal";
+import LoginModal from "../../Components/UI/NeedLoginModal";
 import Backnavbar from '../../Components/Layout/Backnavbar';
-import SignUpBtn from '../../Components/Layout/SignUpBtn_active';
+import GeneralBtn from '../../Components/Layout/GeneralBtn';
 
 /*
     issue : 포즈 재생성 버튼 제어 필요(연타 방지)
@@ -61,7 +61,7 @@ function ShowRandPose(){
   }
 
   const albumPage = () => {
-    if(sessionStorage.getItem('isLogin')){
+    if(Boolean(sessionStorage.getItem('isLogin'))){
       navigate('/mainpage', {state:{
         Tap : 1
       }});
@@ -76,7 +76,7 @@ function ShowRandPose(){
   
   return (
     <div className={styles.ShowRandPose}>
-      {/* {modal ? <LoginModal modalState={modalState}/>: null} */}
+      {modal ? <LoginModal onClose={modalState}/> : null}
       <div className={styles.backnavbar}>
         <Backnavbar title={""}/>
       </div>
@@ -93,7 +93,7 @@ function ShowRandPose(){
         <div className={styles.underline}></div>
       </div>
       <div className={styles.SignUpBtn}>
-        <SignUpBtn title="사진첩 만들기" onClick={albumPage}/>
+        <GeneralBtn title="사진첩 만들기" onClick={albumPage}/>
       </div>
     </div>
   )

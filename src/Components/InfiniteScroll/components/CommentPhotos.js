@@ -24,7 +24,7 @@ export default function Comment({ mesureRef, comment, commentType, albumId }) {
   // }
 
   return (
-    <div className="eachRandomPhoto">
+    <div className="eachRandomPhoto" >
       {modal ? <PhotoModal modalState = {modalState} comment={comment} albumId={albumId}/> : null}
       <img loading="lazy" className={styled.PHOTOS} ref={mesureRef} src={imgUrl} onClick={modalState}></img>
       <div className={styled.name}>{comment.name}</div>

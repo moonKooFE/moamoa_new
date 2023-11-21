@@ -27,15 +27,21 @@ export default function CommentList({
       {comments.map((comment, index) => {
         if (index === comments.length - 1) {
           return (
-            <Comment
-              mesureRef={measureRef}
-              key={comment.index}
-              comment={comment}
-              commentType={commentType}
-            />
+            <React.Fragment key={comment.index}>
+              <Comment
+                mesureRef={measureRef}
+                key={comment.id}
+                comment={comment}
+                commentType={commentType}
+              />
+              </React.Fragment>
           );
         }
-        return <Comment key={comment.index} comment={comment} commentType={commentType}/>;
+        return (
+          <React.Fragment key={comment.index}>
+            <Comment key={comment.index} comment={comment} commentType={commentType}/>
+          </React.Fragment>
+        );
       })}
       {isLoading && <li>Loading...</li>}
     </div>

@@ -6,7 +6,7 @@ const Onboard = () =>{
         <div className={styles.background}>
             <img className={styles.onboardGroup} src={onboardGroup} alt="this is Onboarding Image" />
             <KakaoBtn className={styles.kakao}/>
-            <a href="/Loginpage">다른 계정으로 로그인</a>
+            <a href=""></a>
         </div>
     )
 };

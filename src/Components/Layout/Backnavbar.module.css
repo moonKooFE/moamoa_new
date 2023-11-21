@@ -1,5 +1,7 @@
 @import url("../../Global.css");
 .box{
+    position: fixed;
+    left: 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -9,19 +11,25 @@
     font-size: 2.13vh;
     width: 100%;
 }
+
+.backParent{
+    text-align: start;
+    width: calc(100vw / 3);
+}
+
 .back{
     width: 3.38vh;
     height: 3.38vh;
-    margin-left: 5.28%;
-}
-.backParent{
-    position:fixed;
-    text-align: start;
-    width: 100%;
+    margin-left: 5.28vw;
 }
 
 .title{
     font-size: 20px;
     font-family: 'Pretendard-SemiBold';
     height: 2.75vh;
+    width: calc(100vw / 3);
+}
+
+.right{
+    width: calc(100vw / 3);
 }

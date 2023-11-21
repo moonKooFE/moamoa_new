@@ -1,5 +1,5 @@
 .commentList {
-  width: calc(100% - 6.67% - 6.67%);
+  width: calc(100vw - 6.67vw - 6.67vw);
   overflow-x:hidden;
   list-style-type: none;
   margin-top: -0.11vh;
@@ -8,12 +8,12 @@
   justify-content:space-evenly;
   flex-wrap: wrap;
   background-color: white;
-  padding-left: 6.67%;
-  padding-right: 6.67%;
+  padding-left: 6.67vw;
+  padding-right: 6.67vw;
 }
 
 .commentList>:first-child{
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }

@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import client from "../../Client";
 
-const sessionExpiration = () => {
+const SessionExpiration = () => {
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -14,6 +15,7 @@ const sessionExpiration = () => {
             alert("로그인 세션이 만료되었습니다. 다시 로그인 해주세요.");
             sessionStorage.clear();
             client.defaults.headers.common['Authorization'] = undefined;
+            sessionStorage.setItem('isLogin', false);
             navigate('/onBoard');
           } else {
             alert("서버 연결이 불안정 합니다. 재접속을 시도해 주세요.");
@@ -24,4 +26,4 @@ const sessionExpiration = () => {
       }, []);
 }
 
-export default sessionExpiration;
+export default SessionExpiration;

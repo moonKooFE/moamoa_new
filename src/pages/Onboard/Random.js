@@ -19,7 +19,8 @@ const PickPose = () => {
       }
     
     const albumPage = () => {
-        if(sessionStorage.getItem('isLogin')){
+        console.log(sessionStorage.getItem('isLogin'));
+        if(sessionStorage.getItem('isLogin') == 'true'){
             navigate('/mainpage', {state:{
             Tap : 1
             }});
@@ -30,9 +31,9 @@ const PickPose = () => {
 
     const portalElement = document.getElementById('overlays');
     return(
-        <div className={styles.BG} id="overlays">
+        <div className={styles.BG}>
             
-            <a href="">시작하기</a>
+            <a onClick={()=>navigate('/Onboard')} className={styles.start}>시작하기</a>
             <img src={Onboard} className={styles.img}/>
             <div className={styles.imgContainer} onClick={() => {nextPage()}}>
                 <div>
@@ -40,7 +41,7 @@ const PickPose = () => {
                     <div className={styles.script2}>여기를 클릭하세요</div>
                 </div>
             </div>
-            <GeneralBtn title="사진첩 만들기" onClick={albumPage}/>
+            <GeneralBtn title="사진첩 만들기" onClick={albumPage} width={'39vh'}/>
             {showModal && ReactDOM.createPortal(<Modal onClose={() => setShowModal(false)}/>, portalElement)}
         </div>
     )

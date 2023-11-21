@@ -55,7 +55,7 @@ function App(props){
 
                     {comments.map((comment, index) => {                
                         return (
-                            <div className={styles.box10}>
+                            <div className={styles.box10} key={index}>
                                 <img loading="lazy" className={styles.membermanageimg} src={comment.image} onError={Alterimg}></img>
                                 <div className={styles.membermanage5}>{comment.nickname}</div>
                             </div>

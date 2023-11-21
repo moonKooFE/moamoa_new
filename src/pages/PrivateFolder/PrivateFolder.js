@@ -5,7 +5,6 @@ import ManagingFolderModal from "./ManagingFolderModal";
 import EscapeModal from "./EscapeModal";
 import Upload from "./Upload";
 import PhotosIS from "../../Components/InfiniteScroll/PhotosIS";
-import Plus2 from "../../Assets/plus2.png";
 import Arrow from "../../Assets/Arrow.png";
 import Burger from "../../Assets/Burger.png";
 
@@ -41,8 +40,7 @@ const PrivateFolder = (props) => {
                 <div className={styles.username2}>{albumName}</div>
                 <img src={Burger} className={styles.trash} onClick={modalState}/>
             </div>
-            
-            <PhotosIS api={props.api} heightOfComponent="90.5vh" headerComponent="" requsetType="15" albumId={albumId} modalState1={modalState1}/>
+            <PhotosIS api={props.api} heightOfComponent="83vh" headerComponent="" requsetType="15" albumId={albumId} modalState1={modalState1}/>
         </div>
     );
 }

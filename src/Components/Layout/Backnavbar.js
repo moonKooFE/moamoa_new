@@ -16,6 +16,7 @@ const Backnavbar = ({title}) => {
                 <img className={styles.back} src={Arrow} onClick={goBack}/>
             </div>
             <div className={styles.title}>{title}</div>
+            <div className={styles.right}></div>
         </div>
     )
 }

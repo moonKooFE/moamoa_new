@@ -15,7 +15,7 @@ export default function Oauth() {
   useEffect(() => {
     (async () => {
       try {
-        console.log("/login/kakao?code="+code);
+        // console.log("/login/kakao?code="+code);
         // 토큰 axios 요청
         const res = await client.get("/login/kakao?code="+code);
         const token = res.headers.authorization;
@@ -27,7 +27,6 @@ export default function Oauth() {
         sessionStorage.setItem('email', res.data.response.email);
         sessionStorage.setItem('isLogin', true);
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        alert("로그인 성공!");
         // home으로 이동
         navigate('/MainPage');
       } catch (e) {
