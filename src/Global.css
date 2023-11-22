@@ -1,18 +1,21 @@
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('./Assets/font/Pretendard-Regular.woff') format('woff');
+    /* url('./Assets/font/Pretendard-Regular.woff') format('woff'),; */
     font-weight: 400;
   }
 
   @font-face {
     font-family: 'Pretendard-SemiBold';
     src: url('./Assets/font/Pretendard-SemiBold.woff') format('woff');
+    /* url('./Assets/font/Pretendard-SemiBold.woff') format('woff'); */
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'Pretendard-Bold';
     src: url('./Assets/font/Pretendard-Bold.woff') format('woff');
+    /* url('./Assets/font/Pretendard-Bold.woff') format('woff'); */
     font-weight: 700;
 	  font-display: swap;
 }
@@ -20,13 +23,20 @@
 @font-face {
   font-family: 'Pretendard-ExtraBold';
   src: url('./Assets/font/Pretendard-ExtraBold.woff') format('woff');
+  /* url('./Assets/font/Pretendard-ExtraBold.woff') format('woff'); */
   font-weight: 600;
 	font-display: swap;
 }
-  
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('./Assets/font/Pretendard-Light.woff') format('woff');
+  /* url('./Assets/font/Pretendard-Light.woff') format('woff'); */
+  font-weight: 300;
+}
 @font-face {
     font-family: 'Pretendard-ExtraLight';
     src: url('./Assets/font/Pretendard-ExtraLight.woff') format('woff');
+    /* url('./Assets/font/Pretendard-ExtraLight.woff') format('woff'); */
     font-style: normal;
   }
 
@@ -34,15 +44,13 @@
 @font-face {
   font-family: 'Pretendard-Medium';
   src: url('./Assets/font/Pretendard-Medium.woff') format('woff');
+  /* url('./Assets/font/Pretendard-Medium.woff') format('woff'); */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HakgyoansimWoojuR';
-  src: url('./Assets/font/HakgyoansimWoojuR.woff') format('woff');
-}
-@font-face {
-  font-family: 'Pretendard-Light';
-  src: url('./Assets/font/Pretendard-Light.woff') format('woff');
-  font-weight: 300;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
