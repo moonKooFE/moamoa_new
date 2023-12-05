@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "./CommentPhotos.module.css";
-import modalstyled from "./modalStyle.module.css";
+import styles from "./CommentPhotos.module.css";
+import modalstyles from "./modalStyle.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import client from "../../../Client";
@@ -26,9 +26,9 @@ export default function Comment({ mesureRef, comment, commentType, albumId }) {
   return (
     <div className="eachRandomPhoto" >
       {modal ? <PhotoModal modalState = {modalState} comment={comment} albumId={albumId}/> : null}
-      <img loading="lazy" className={styled.PHOTOS} ref={mesureRef} src={imgUrl} onClick={modalState}></img>
-      <div className={styled.name}>{comment.name}</div>
-      <div className={styled.date}>{comment.created_at}</div>
+      <img loading="lazy" className={styles.PHOTOS} ref={mesureRef} src={imgUrl} onClick={modalState}></img>
+      <div className={styles.name}>{comment.name}</div>
+      <div className={styles.date}>{comment.created_at}</div>
     </div>
   );
 }
@@ -50,16 +50,16 @@ const PhotoModal = (props) => {
   }
 
   return(
-    <div className={modalstyled.modal}>
-      <div className={modalstyled.ModalBackground} onClick={props.modalState}></div>
-      <div className={modalstyled.ModalArea}>
+    <div className={modalstyles.modal}>
+      <div className={modalstyles.ModalBackground} onClick={props.modalState}></div>
+      <div className={modalstyles.ModalArea}>
         <div>
-          <img src={trashCan} className={modalstyled.trashCan} onClick={deletePhoto}/>
+          <img src={trashCan} className={modalstyles.trashCan} onClick={deletePhoto}/>
         </div>
-        <div className={modalstyled.title}>{props.comment.name}</div>
-        <div className={modalstyled.date}>{props.comment.created_at}</div>
-        <div className={modalstyled.imgArea}>
-          <img loading="lazy" className={modalstyled.image} src={props.comment.image}></img>
+        <div className={modalstyles.title}>{props.comment.name}</div>
+        <div className={modalstyles.date}>{props.comment.created_at}</div>
+        <div className={modalstyles.imgArea}>
+          <img loading="lazy" className={modalstyles.image} src={props.comment.image}></img>
         </div>
       </div>
     </div>

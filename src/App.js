@@ -25,7 +25,10 @@ import Terms from './pages/MyPage/Terms';
 import Privacy from './pages/MyPage/Privacy';
 
 // 임시 로그인
-import LogInForTest from "./pages/LoginForTest/loginpage2"
+import LogInForTest from "./pages/LoginForTest/loginpage2";
+
+// 관리자 페이지
+import AdminPage from "./pages/AdminPage/AdminPage";
 
 function App(){
   return (
@@ -57,6 +60,8 @@ function App(){
       <Route path="/privacy" element={<Privacy/>}></Route>
       
       <Route path="/LogInForTest" element={<LogInForTest/>}/>
+
+      <Route path="/AdminPage" element={<AdminPage/>}/>
     </Routes>
     </BrowserRouter>
   );

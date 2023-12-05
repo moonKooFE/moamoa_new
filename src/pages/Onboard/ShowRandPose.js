@@ -1,7 +1,7 @@
 import styles from './ShowRandPose.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import defaultImg from '../../Assets/OnboardMainImg.png';
+import defaultImg from '../../Assets/OnboardMainImg.webp';
 import reroll from '../../Assets/Reroll.svg';
 import client from '../../Client';
 import LoginModal from "../../Components/UI/NeedLoginModal";

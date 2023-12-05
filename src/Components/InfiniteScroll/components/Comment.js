@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./Comment.css";
-import styled from "./Comment.module.css";
 import { useState } from "react";
 import PhotoModal from "../../UI/PhotoModal";
 
