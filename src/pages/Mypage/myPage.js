@@ -1,10 +1,16 @@
 import styles from './myPage.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { useNavigate,BrowserRouter as Router } from "react-router-dom";
 import LogoutModal from "./logoutModal";
 import BlueScreen from "../../Assets/BlueScreen.png";
 function App(props){
+    const [role, setRole] = useState('');
+
+    useEffect(() => {
+        const userRole = sessionStorage.getItem('role');
+        setRole(userRole);
+    },[])
     const Alter = (event) => {
         event.target.src=BlueScreen;
     }
@@ -29,6 +35,12 @@ function App(props){
                     <p className={styles.username}>{sessionStorage.getItem("nickname")}님</p>
                 </div>
             </div>
+            {role ==='admin' && (
+                <div className={styles.bordadd}>
+                    <div className={styles.setuser}>관리자기능</div>
+                    <Link to="/AdminPage"><div className={styles.changprofile}>포즈모아보기 사진 검토</div></Link>
+                </div>
+            )}
             <div className={styles.bord2}>
                 { outModal ? <LogoutModal modalState5={modalState5}/> : null}
                 <div className={styles.setuser}>내 정보 관리</div>
@@ -37,6 +49,7 @@ function App(props){
                 </div></Link>
                 <Link to="/changepassword"><div className={styles.changprofile}>비밀번호 변경</div></Link>
             </div>
+            {}
             <div className={styles.bord3}>
                 <div className={styles.setuser}>이용안내</div>
                 <Link to="/inquiry"><div className={styles.changprofile}>문의하기</div></Link>

@@ -4,9 +4,9 @@
     display: center;
 }
 .arrow6{
-    /* background-image: url("/src/resource/arrow5.png"); */
+    background-image: url("../../Assets/Arrow.png");
     background-repeat: no-repeat;
-    background-size: 4vh;
+    background-size: 3vh;
     width:5vh;
     height:5vh;
     margin-top: 6vh;
@@ -85,4 +85,8 @@
 .bord3{
     border-bottom: .5vh solid #F9F9FB;
     height: 29vh;
+}
+.bordadd{
+    border-bottom: .5vh solid #F9F9FB;
+    height: 10vh;
 }

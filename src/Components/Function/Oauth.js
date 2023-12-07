@@ -26,6 +26,7 @@ export default function Oauth() {
         sessionStorage.setItem('id', res.data.response.id);
         sessionStorage.setItem('email', res.data.response.email);
         sessionStorage.setItem('isLogin', true);
+        sessionStorage.setItem('role',res.data.response.role);
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         // home으로 이동
         navigate('/MainPage');

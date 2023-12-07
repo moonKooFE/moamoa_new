@@ -18,7 +18,7 @@ import DefaultProfile from "../../Assets/defaultImg.png"
 import createAlbumImg from "../../Assets/AddAlbum.svg";
 import PhotoModal from "../../Components/UI/PhotoModal";
 import Albums from "../../Assets/albums.png";
-import SessionExpiration from "../../Components/Function/SessionExpiration";
+import SessionExpiration from "../../Components/Function/sessionExpiration";
 
 const TabMenu = styled.div`
   margin-top: 2.88vh;
