@@ -12,12 +12,6 @@ function App(){
     const [disableBtn , setDisableBtn] = useState(false);
     const [UserEmail, setUserEmail] = useState('');
 
-    const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
-    const REDIRECT_URI = process.env.REACT_APP_RURL;
-    const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
-
-    const delay = ms => new Promise(resolve => setTimeout(resolve, ms)); // 딜레이
-
     const reset1 = () => {
         setEmail('');
     }
@@ -25,12 +19,6 @@ function App(){
     const reset2 = () => {
         setPassword('');
     }
-    const nextPage = async event => {
-        navigate('/MainPage');
-      }
-
-    // sessionStorage.setItem('token', "");
-    // sessionStorage.setItem('isLogin', false); // 로그인 전에 기존 로그인 정보 초기화
 
     const savePassword = event => {
         setPassword(event.target.value);
@@ -72,7 +60,7 @@ function App(){
                 navigate('/MainPage');
             })
             .catch(function (error) {
-                //console.log(error);
+                console.log(error);
                 alert(error.response.data.error.message);
             })
             .finally(function () {
@@ -102,21 +90,22 @@ function App(){
     
 
     return(
-        <div className={styles.background5}>
-            <div className={styles.arrow5} onClick={() => navigate(-1)}></div>
-            <h1 className={styles.logintext2}>로그인하기</h1>
-            <form onSubmit={onSubmitHandler}>
-                <div className={styles.emailname}>이메일
-                    <input type="email" placeholder='이메일을 입력해주세요' onChange={saveEmail} value={email} className={styles.emailinput} required></input>
-                    <div className={styles.del} onClick={reset1}>X</div>
-                </div>
-                <div className={styles.passwordname}>비밀번호
-                    <input type="password" placeholder='비밀번호를 입력해주세요' onChange={savePassword} value={password} className={styles.emailinput} required></input>
-                    <div className={styles.del} onClick={reset2}>X</div>
-                </div>
-                {disableBtn ? <div className={styles.loginbtn1}>로그인 중...</div> : <button type='submit' value="로그인" className={styles.loginbtn1}>로그인</button>}
-                
-            </form>           
+        <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
+            <div className={styles.background5}>
+                <div className={styles.arrow5} onClick={() => navigate(-1)}></div>
+                <h1 className={styles.logintext2}>로그인하기</h1>
+                <form onSubmit={onSubmitHandler}>
+                    <div className={styles.emailname}>이메일
+                        <input type="email" placeholder='이메일을 입력해주세요' onChange={saveEmail} value={email} className={styles.emailinput} required></input>
+                        <div className={styles.del} onClick={reset1}>X</div>
+                    </div>
+                    <div className={styles.passwordname}>비밀번호
+                        <input type="password" placeholder='비밀번호를 입력해주세요' onChange={savePassword} value={password} className={styles.emailinput} required></input>
+                        <div className={styles.del} onClick={reset2}>X</div>
+                    </div>
+                    {disableBtn ? <div className={styles.loginbtn1}>로그인 중...</div> : <button type='submit' value="로그인" className={styles.loginbtn1}>로그인</button>}
+                </form>           
+            </div>
         </div>
     );
 
