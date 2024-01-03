@@ -1,6 +1,6 @@
 .background5{
     background-color: white;
-    width: 100%;
+    width: 360px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 .arrow5{
     width: 3vh;
     height: 3vh;
-    /* background-image: url(../resource/arrow4.png); */
+    background-image: url(../../Assets/Arrow.png);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: 3vh;
@@ -26,7 +26,7 @@
 .emailname{
     color: rgb(0, 0, 0);
     border-bottom: 0.2vh solid #E6E9EC;
-    width: 85%;
+    width: 300px;
     height: 7.5vh;
     display: flex;
     flex-direction: column;
@@ -38,19 +38,17 @@
     height: 3vh;
     outline: none;
     color: rgb(0, 0, 0);
-    position: relative;
     margin-top: 1.5vh;
     margin-left: 0;
 }
 .emailinput::placeholder{
     color: rgba(0, 0, 0, 0.5);
-    
 }
 
 .passwordname{
     color: rgb(0, 0, 0);
     border-bottom: 0.2vh solid #E6E9EC;
-    width: 85%;
+    width: 300px;
     height: 7.5vh;
     display: flex;
     flex-direction: column;
@@ -68,12 +66,13 @@
     text-decoration: none;
     color:rgb(255, 255, 255);
     text-align: center;
-    width: 90%;
+    width: 320px;
     font-weight: 900;
     margin: auto;
     margin-top: 2vh;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .find{
     display: flex;
@@ -82,81 +81,15 @@
     margin-top: 2vh;
     margin-left: 1vh;
 }
-.findid{
-    font-size: 1.5vh;
-    border-right: 0.1vh solid rgb(0, 0, 0);
-    width: 9vh;
-    text-decoration: none;
-    color:black;
 
-}
-.findpw{
-    font-size: 1.5vh;
-    margin-left: 2vh;
-    text-decoration: none;
-    color:black;
-}
-.line1{
-    width: 85%;
-    border-top: 0.15vh solid rgba(0, 0, 0, 0.521);
-    margin:auto;    
-}
-.easy{
-    margin-top: 5vh;
-}
-.easylogin{
-    color: rgb(0, 0, 0);
-    background-color: white;
-    width: 10vh;
-    height: 3vh;
-    font-size: 1.5vh;;
-    margin:auto;
-    display: flex;
-    justify-content: center;
-    margin-top: -1vh;
-}
-.kakaologo{
-    /* background-image: url("../resource/kakao1.png"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 2vh;
-    width: 3vh;
-    height: 3vh;
-    margin-right: 1vh;
-}
-.kakao_button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    color: black;
-    padding: 1.5vh 0vh 1.5vh 0vh;
-    border-style: none;
-    background: #FBEC4F;
-    border-radius: 2vh;;
-    font-size: 2vh;
-    text-align: center;
-    width: 90%;
-    height: 2.5vh;
-    font-weight: 900; 
-    top: 2.5vh;
-    position:relative;
-}
-
-.kakaotext{
-    text-align: center;
-    color: rgba(0, 0, 0, 0.556);
-    font-size: 1.5vh;
-    line-height: 0vh;
-}
 .del{
     width: 3vh;
     height:5vh;
-    /* background-image: url(../../src/resource/delete.png); */
     background-repeat: no-repeat;
     background-size: 2.2vh;;
-    float: right;
-    margin-top:-2.5vh;
-    margin-left: 90%;
+    margin-top: 4.5vh;
+    position: fixed;
+    margin-left: 280px;
     z-index: 1999;
+    cursor: pointer;
 }

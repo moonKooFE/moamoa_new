@@ -108,31 +108,15 @@ function App(){
             <form onSubmit={onSubmitHandler}>
                 <div className={styles.emailname}>이메일
                     <input type="email" placeholder='이메일을 입력해주세요' onChange={saveEmail} value={email} className={styles.emailinput} required></input>
-                    <div className={styles.del} onClick={reset1}></div>
+                    <div className={styles.del} onClick={reset1}>X</div>
                 </div>
                 <div className={styles.passwordname}>비밀번호
                     <input type="password" placeholder='비밀번호를 입력해주세요' onChange={savePassword} value={password} className={styles.emailinput} required></input>
-                    <div className={styles.del} onClick={reset2}></div>
+                    <div className={styles.del} onClick={reset2}>X</div>
                 </div>
                 {disableBtn ? <div className={styles.loginbtn1}>로그인 중...</div> : <button type='submit' value="로그인" className={styles.loginbtn1}>로그인</button>}
                 
-            </form>
-            <div className={styles.find}>
-                <Link to="" className={styles.findid}>아이디 찾기</Link>
-                <Link to="" className={styles.findpw}>비밀번호 찾기</Link>
-            </div>
-            <div className={styles.easy}>
-                <div className={styles.line1}>
-                    <div className={styles.easylogin}>간편 로그인</div>
-                </div>
-                
-                <div className={styles.kakao_button}>
-                    <div className={styles.kakaologo}></div>
-                    <a href={KAKAO_AUTH_URI} className={styles.kakaotext}>카카오로 로그인</a>
-                </div> 
-            </div>
-            
-           
+            </form>           
         </div>
     );
 
