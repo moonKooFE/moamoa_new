@@ -7,17 +7,18 @@ const AdminPage = () => {
     const fetchImages = async () => {
         try {
             const response = await client.get('/admin/review');
+            console.log(response.data);
             return response.data;
         } catch (error) {
             console.error('에러가 발생했습니다.',error);
         }
     }
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(["uri", 1]);
     
     useEffect(()=>{
         const loadImages = async () => {
             const fetchedImages = await fetchImages();
-            setImages(fetchedImages)
+            //setImages(fetchedImages)
         };
         loadImages();
     }, []);
@@ -31,14 +32,18 @@ const AdminPage = () => {
         setinform([image,id]);
         Modalopen();
     }
-    const Accept = (image,id) => {
-        sendApprovalInfo(image,id,'accept');
+    const Accept = (id) => {
+        sendApprovalInfo(id,'ACCEPT');
     }
-    const Refuse = (image, id) => {
-        sendApprovalInfo(image,id,'refuse');
+    const Refuse = (id) => {
+        sendApprovalInfo(id,'RETECT');
     }
-    const sendApprovalInfo = (image,id,status) => {
-        client.post('',[image, id,status])
+    const sendApprovalInfo = (id, status) => {
+        const formData = new FormData();
+        formData.append('requestDTO', {"pass" : status});
+        
+        client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
+        client.post('/admin/review/photoes/' + id, formData)
         .then(response => {
             console.log("success");
         })
@@ -56,8 +61,8 @@ const AdminPage = () => {
                 <div className={styles.Modal}>
                     <div className={styles.box1}></div>
                     <img src={inform[0]} id={[inform[1]]} className={styles.image2}/>
-                    <div className={styles.acceptBtn} onClick={()=>Accept(inform[0],inform[2])}>수락</div>
-                    <div className={styles.refuseBtn} onClick={()=>Refuse(inform[0],inform[2])}>거절</div>
+                    <div className={styles.acceptBtn} onClick={()=>Accept(inform[1])}>수락</div>
+                    <div className={styles.refuseBtn} onClick={()=>Refuse(inform[1])}>거절</div>
                 </div>
             )}
         </div>

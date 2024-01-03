@@ -31,7 +31,7 @@ function App(props) {
           reader.readAsDataURL(fileBlob);
           
           if(fileBlob.size >= 1048576){
-            // 이미지 압축  
+            // 이미지 압축
             //console.log("이미지 압축 진행")
             const options = {
               maxSizeMB: 1, // 최대 파일 크기 (1MB로 설정)
@@ -89,12 +89,9 @@ function App(props) {
     }
 
     const handleOptionChange = (event) => {
-      console.log(sessionStorage.getItem('id'));
-      if(sessionStorage.getItem('id') === adminId)
-        setOpen(!open);
+      setOpen(!open);
     }
 
-    
     async function onSubmitHandler(event){
         event.preventDefault();
         setDisableBtn(true);
@@ -210,13 +207,8 @@ function App(props) {
               {}
               <div className={styles.setPublicArea}>
               공개하기<br/>
-              (기능 준비중)
                 <label className={styles.switch}>
-                  {
-                    sessionStorage.getItem('id') == adminId ?
-                    <input type="checkbox" onChange={handleOptionChange}/> :
-                    <input type="checkbox" onChange={handleOptionChange} disabled/>
-                  }
+                  <input type="checkbox" onChange={handleOptionChange}/>
                   <span className={styles.slider}></span>
                 </label>
               </div>
@@ -237,15 +229,3 @@ function App(props) {
   );
 }
 export default App;
-
-/* 
-"Validation failed for argument [1] in public org.springframework.http.ResponseEntity<?>
- com.example.PixelPioneers.controller.PhotoRestController.
- photoAdd
- (int,com.example.PixelPioneers.DTO.PhotoRequest$PhotoAddDTO,org.springframework.web.multipart.MultipartFile,com.example.PixelPioneers.config.auth.CustomUserDetails,org.springframework.validation.Errors)
-  throws java.lang.Exception: 
-  [Field error in object 'requestDTO' on field 'created_at': rejected value [null];
-   codes [NotNull.requestDTO.created_at,NotNull.created_at,NotNull.java.time.LocalDate,NotNull]; 
-   arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [requestDTO.created_at,created_at];
-    arguments []; default message [created_at]]; default message [널이어서는 안됩니다]] "
-*/

@@ -276,8 +276,8 @@ input {
     display: flex;
     font-size: 2vh;
     justify-content: space-between;
-    color: #ccc;
-    line-height: 2.2vh;
+    color: #48505C;
+    line-height: 4vh;
 }
 
 .switch {
