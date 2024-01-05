@@ -40,14 +40,20 @@ const AdminPage = () => {
     }
     const sendApprovalInfo = (id, status) => {
         let requestDTO = {
-            "photoid" : id
+            "pass" : status
         };
         
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        client.post('/admin/review/photoes/' + id +'?photoId=' + id, requestDTO)
+        client.post('/admin/review/photoes/' + 272, requestDTO)
         .then(response => {
             console.log("success");
-            alert("수락하였습니다.");
+            if(status == "ACCEPT"){
+                alert("수락하였습니다.");
+            } else {
+                alert("거절하였습니다.");
+            }
+            
+            window.location.reload();
             Modalopen();
         })
         .catch(error => {
