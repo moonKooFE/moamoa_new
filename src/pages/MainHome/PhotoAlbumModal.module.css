@@ -34,6 +34,7 @@
   border-radius: 1.5vh;
   margin-top: 38vh;
   max-width: 90vw;
+  overflow: hidden;
 }
 
 .nav{
@@ -91,6 +92,7 @@
 }
 
 .filterUsers{
+  height: 12vh;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;

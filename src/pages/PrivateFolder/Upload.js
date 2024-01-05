@@ -7,8 +7,6 @@ import client from "../../Client";
 import imageCompression from "browser-image-compression";
 import close from "../../Assets/close2.png";
 
-const adminId = 7;
-
 function App(props) {
     //props.albumId
     const [albumId, setAlbumId] = useState(props.albumId); // id
@@ -97,7 +95,7 @@ function App(props) {
         setDisableBtn(true);
 
         if(open){
-          alert("*포즈 모아보기 스페셜 카테고리에 게시됩니다.")
+          alert("* 관리자 검토 후 포즈 모아보기 스페셜 카테고리에 게시됩니다.");
         }
 
         const inputs = {
