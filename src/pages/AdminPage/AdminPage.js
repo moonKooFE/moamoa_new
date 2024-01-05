@@ -7,18 +7,18 @@ const AdminPage = () => {
     const fetchImages = async () => {
         try {
             const response = await client.get('/admin/review');
-            console.log(response.data);
-            return response.data;
+            console.log(response.data.response);
+            return response.data.response;
         } catch (error) {
             console.error('에러가 발생했습니다.',error);
         }
     }
-    const [images, setImages] = useState(["uri", 1]);
+    const [images, setImages] = useState([{id:1, image:"hello"}]);
     
     useEffect(()=>{
         const loadImages = async () => {
             const fetchedImages = await fetchImages();
-            //setImages(fetchedImages)
+            setImages(fetchedImages);
         };
         loadImages();
     }, []);
@@ -39,30 +39,40 @@ const AdminPage = () => {
         sendApprovalInfo(id,'RETECT');
     }
     const sendApprovalInfo = (id, status) => {
-        const formData = new FormData();
-        formData.append('requestDTO', {"pass" : status});
+        let requestDTO = {
+            "photoid" : id
+        };
         
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        client.post('/admin/review/photoes/' + id, formData)
+        client.post('/admin/review/photoes/' + id +'?photoId=' + id, requestDTO)
         .then(response => {
             console.log("success");
+            alert("수락하였습니다.");
+            Modalopen();
         })
         .catch(error => {
-            console.error('failed:',error)
+            console.error('failed:',error);
+            alert("에러.");
         })
     }
     return(
         <div className={styles.AdminPage}>
-            <Backnavbar/>
-            {images.map((image, id) => (
-                <div className={styles.box}><img className={styles.image} key={id} src={image} onclick={imageopen(image,id)} /></div>
-            ))}
+            <div className={styles.backnavbar}>
+                <Backnavbar title={"관리자 페이지"} className={styles.title}/>
+            </div>
+            <div className={styles.scrollArea}>
+                {images.map(image => (
+                    <div className={styles.box}><img className={styles.image} key={image.id} src={image.image} onClick={() => imageopen(image.image, image.id)}/></div>
+                ))}
+            </div>
             {openModal && (
                 <div className={styles.Modal}>
-                    <div className={styles.box1}></div>
-                    <img src={inform[0]} id={[inform[1]]} className={styles.image2}/>
-                    <div className={styles.acceptBtn} onClick={()=>Accept(inform[1])}>수락</div>
-                    <div className={styles.refuseBtn} onClick={()=>Refuse(inform[1])}>거절</div>
+                    <div className={styles.ModalBackground} onClick={Modalopen}></div>
+                    <div className={styles.box1}>
+                        <img src={inform[0]} id={[inform[1]]} className={styles.image2}/>
+                        <div className={styles.acceptBtn} onClick={()=>Accept(inform[1])}>수락</div>
+                        <div className={styles.refuseBtn} onClick={()=>Refuse(inform[1])}>거절</div>
+                    </div>
                 </div>
             )}
         </div>

@@ -96,6 +96,10 @@ function App(props) {
         event.preventDefault();
         setDisableBtn(true);
 
+        if(open){
+          alert("*포즈 모아보기 스페셜 카테고리에 게시됩니다.")
+        }
+
         const inputs = {
             "id" : albumId,
             "name" : photoTitle,

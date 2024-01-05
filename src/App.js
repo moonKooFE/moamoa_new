@@ -27,7 +27,7 @@ import Privacy from './pages/MyPage/Privacy';
 import LogInForTest from "./pages/LoginForTest/loginpage2";
 
 // 관리자 페이지
-// import AdminPage from "./pages/AdminPage/AdminPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
 
 function App(){
   return (
@@ -60,7 +60,7 @@ function App(){
       
       <Route path="/LogInForTest" element={<LogInForTest/>}/>
 
-      {/*<Route path="/AdminPage" element={<AdminPage/>}/>*/}
+      <Route path="/AdminPage" element={<AdminPage/>}/>
     </Routes>
     </BrowserRouter>
   );

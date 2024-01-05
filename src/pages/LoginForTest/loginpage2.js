@@ -10,7 +10,6 @@ function App(){
     const [email, setEmail] = useState("");
     const [token, setToken] = useState("");
     const [disableBtn , setDisableBtn] = useState(false);
-    const [UserEmail, setUserEmail] = useState('');
 
     const reset1 = () => {
         setEmail('');
@@ -41,12 +40,14 @@ function App(){
 
         setDisableBtn(true); // 버튼 클릭 시 post요청 완료 전까지 비활성화
 
-        let loginData = {
+        let LoginDTO = {
             "email" : email,
             "password" : password,
         }
 
-        client.post('/login', loginData)
+        console.log(LoginDTO);
+
+        client.post('/login', LoginDTO)
             .then(function (response) {
                 //console.log(response);
                 setToken(response.headers.authorization);
@@ -67,27 +68,6 @@ function App(){
                 setDisableBtn(false); // 버튼 활성화
             });
     }
-
-    const createAlbums = (event) => {
-        event.preventDefault();
-
-        const albumData = {
-            "image": "test_image2",
-            "name": "test_name2",
-            "userIdList": [ 4 ]
-        }
-
-        client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
-        client.post('albums', albumData)
-            .then(function (response) {
-                //console.log(response);
-            })
-            .catch(function (error) {
-                //console.log(error);
-                //console.log(error.response.data.error.message);
-            });
-    }
-    
 
     return(
         <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
