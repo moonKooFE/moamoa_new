@@ -33,7 +33,7 @@ function App(){
             .then(blob => {
                 const file = new File([blob], imageSrc.split("/").pop(), { type: 'image/png' });
                 setFile(file);
-                console.log(file);
+                //console.log(file);
             })
             .catch(error => {
                 console.error('이미지 다운로드 중 오류 발생:', error);
@@ -87,8 +87,8 @@ function App(){
               "nickname" : UserNickname,   
           }
 
-          console.log(inputs);
-          console.log(file);
+          //console.log(inputs);
+          //console.log(file);
 
           const joinData = new Blob([JSON.stringify(inputs)], { type: "application/json" });
   
@@ -99,7 +99,7 @@ function App(){
           client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
           await client.put('/users/'+sessionStorage.getItem('id') + '/profile', formData, {headers: {'Content-Type': 'multipart/form-data'}})
           .then(function (response) {
-              console.log(response);
+              //console.log(response);
               sessionStorage.setItem('nickname', response.data.response.nickname);
               sessionStorage.setItem('image', response.data.response.image);
               alert("정보변경 성공!");

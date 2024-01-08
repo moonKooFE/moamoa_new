@@ -30,8 +30,8 @@ export default function App(props) {
     }
     const people = sessionStorage.getItem('people');
     const category = sessionStorage.getItem('category');
-    // //console.log(people);
-    // //console.log(category);
+    //console.log(people);
+    //console.log(category);
     (async () => {
       const { data: newComments } = await api.comments(commentType, page, category, people);
       setComments((prevComments) => [...prevComments, ...newComments.response]);

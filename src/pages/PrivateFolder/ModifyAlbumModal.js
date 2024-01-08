@@ -103,7 +103,7 @@ function App(props) {
         
         await client.put('/albums/' + albumId, formData, {headers: {'Content-Type': 'multipart/form-data'}})
             .then(function (response) {
-                console.log(response);
+                //console.log(response);
                 alert("수정되었습니다.");
                 props.modalState4();
                 window.location.replace('/PrivateFolder');

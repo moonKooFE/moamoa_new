@@ -45,8 +45,6 @@ function App(){
             "password" : password,
         }
 
-        console.log(LoginDTO);
-
         client.post('/login', LoginDTO)
             .then(function (response) {
                 //console.log(response);

@@ -28,7 +28,7 @@ function App(){
         formData.append('requestDTO', joinData);
         
     
-        console.log(inputs);
+        //console.log(inputs);
 
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         client.post('/users/'+sessionStorage.getItem('id')+'/withdrawal', inputs)

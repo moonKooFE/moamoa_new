@@ -19,7 +19,7 @@ const PickPose = () => {
       }
     
     const albumPage = () => {
-        console.log(sessionStorage.getItem('isLogin'));
+        //console.log(sessionStorage.getItem('isLogin'));
         if(sessionStorage.getItem('isLogin') == 'true'){
             navigate('/mainpage', {state:{
             Tap : 1

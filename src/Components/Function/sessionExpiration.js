@@ -4,7 +4,7 @@ import client from "../../Client";
 const SessionExpiration = () => {
 
     useEffect(()=>{
-        console.log(sessionStorage.getItem('token'));
+        //console.log(sessionStorage.getItem('token'));
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         client.get('/users?nickname=asdf')
         .then(function(res) {

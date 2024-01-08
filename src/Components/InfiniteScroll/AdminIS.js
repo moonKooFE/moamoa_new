@@ -23,8 +23,8 @@ export default function App(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // //console.log(people);
-    // //console.log(category);
+    //console.log(people);
+    //console.log(category);
     (async () => {
       const { data: newComments } = await api.comments(requsetType, page, "", "");
       setComments((prevComments) => [...prevComments, ...newComments.response]);

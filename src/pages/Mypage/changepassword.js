@@ -17,16 +17,16 @@ function App(){
       };
     const savePassword = event =>{
         setcurpw(event.target.value);
-        console.log(event.target.value);
+        //(event.target.value);
     }
     const newPassword=event =>{
         setnewpw(event.target.value);
-        console.log(event.target.value);
+        //console.log(event.target.value);
     }
     const newpwC = event =>{
         setnewpwcon(event.target.value);
         setIsPwc(event.target.value==newpw);
-        console.log(event.target.value);
+        //console.log(event.target.value);
     }
       const onSubmitHandler = (event) =>{
         event.preventDefault();
@@ -36,17 +36,17 @@ function App(){
             "newPassword" : newpw           
         }   
 
-        console.log(inputs);
+        //console.log(inputs);
 
         client.defaults.headers.common['Authorization'] = sessionStorage.getItem('token');
         client.put('/users/'+sessionStorage.getItem('id')+'/password', inputs)
         .then(function (response) {
-            console.log(response);
+            //console.log(response);
             alert("비밀번호 변경성공!");
             window.location.replace('/mypage');
         })
         .catch(function (error) {
-            console.log(error);
+            //console.log(error);
             alert(error.response.data.error.message);
         })
         

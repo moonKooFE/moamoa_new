@@ -29,7 +29,7 @@ class Api {
       await client.get("/albums", {
         params: { page : _page }
       }).then(function(res){
-        // //console.log(res); 
+        //console.log(res); 
         response = res;
       }).catch(function(err){
         //console.log(err);
