@@ -52,7 +52,6 @@ const TabMenu = styled.div`
 const MainPage = (props) => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
-  const [token, setToken] = useState(sessionStorage.getItem('token'));
   const [userIcon, setUserIcon] = useState(DefaultProfile);
 
   //스왑 이벤트 처리
@@ -183,15 +182,11 @@ const Tap1 = (props) => {
   
   return(
     <div className={stylesTap1.Tap1}>
-
-
       {modal1 ? <PhotoModal modalState={modalState} modal={modal1} imgUrl={imgUrl}/>: null}
-      <div className={stylesTap1.Banner} onClick={modalState}>
-        <div>
-          <div className={stylesTap1.BannerDiv1}>무슨 포즈할 지 고민될 때는?</div>
-          <div className={stylesTap1.BannerDiv2}>랜덤 포즈 뽑기</div>
-        </div>
-        <div className={stylesTap1.BannerImg}></div>
+      <div className={stylesTap1.B}><div className={stylesTap1.Banner} onClick={modalState}>
+        <div className={stylesTap1.BannerComment}>재밌는 포즈가 생각 안나시나요?</div>
+        <div className={stylesTap1.BannerComment2}>지금 랜덤 포즈 뽑아보세요!</div>
+      </div>
       </div>
       <AllposesContent height='57vh'/>
     </div>

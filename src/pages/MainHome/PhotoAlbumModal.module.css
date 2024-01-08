@@ -11,20 +11,82 @@
   width: 100%;
   font-family: 'Pretendard-Medium';
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
 .ModalBackground{
-  position:absolute;
+  position:fixed;
   background-color: black;
   opacity: 52%;
   height: 100vh;
   width: 100%;
 }
 
-.inviteAria{
-  position: absolute;
+.topScript1, .topScript2{
+  color:white;
+  font-size: 2.5vh;
+  margin-top: 19vh;
+  margin-bottom: 1vh;
+ 
+  position: relative;
+}
+
+.topScript1{
+  margin-right: 14vh;
+}
+
+.topScript2{
+  margin-right: 11vh;
+}
+
+.selectAlbumtype{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.albumeType1, .albumeType2{
+  /* position: absolute; */
+  font-family: 'Pretendard-Medium';
+  background-color: white;
+  z-index: 2;
+  width: 39vh;
+  max-width: 90vw;
+  height: 16.25vh;
+  border-radius: 1.5vh;
+  /* margin-top: 38vh; */
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.albumeType2{
+  margin-top: 3.13vh;
+}
+
+.albumeType1 > :first-child, .albumeType2 > :first-child{
+  color: black;
+  font-size: 2.75vh;
+  font-weight:bold;
+  margin-top: 5.1vh;
+  width: fit-content;
+  margin-left: 3.5vh;
+}
+
+.albumeType1 > :last-child, .albumeType2 > :last-child{
+  color: #C0B7B7;
+  font-size: 1.75vh;
+  width: fit-content;
+  margin-left: 3.5vh;
+  margin-top: 0.5vh;
+}
+
+.inviteAria, .titleAria{
+  position: relative;
   font-family: 'Pretendard-Medium';
   background-color: white;
   z-index: 2;
@@ -32,9 +94,12 @@
   max-width: 90vw;
   height: 24vh;
   border-radius: 1.5vh;
-  margin-top: 38vh;
   max-width: 90vw;
   overflow: hidden;
+}
+
+.inviteAria{
+  margin-top: 23vh;
 }
 
 .nav{

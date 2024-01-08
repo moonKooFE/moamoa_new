@@ -4,36 +4,41 @@
     width: 100%;
     height: auto;
     font-family: 'Pretendard-Regular';
+    
 }
-
+.B{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .Banner{
-    color: black;
-    height: 12.5vh;
-    background-color: #F3F3F3;
+    color: #ffffff;
+    height: 10.25vh;
+    background: linear-gradient(95.45deg, #6a9bff -2%, #1C66FD 85.74%);
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.12);
     opacity: 90%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 35vh;
+    border-radius: 2.13vh;
+    margin-top: 2.38vh;
+    
 }
 
-.BannerDiv1{
-    margin-top: 2.5vh;
-    font-size: 2vh;
+.BannerComment{
+    font-size: 11px;
+    font-family: 'Pretendard-Light';
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+    margin-top: 3vh;
 }
-
-.BannerDiv2{
-    margin-top: 1vh;
-    font-size: 2vh;
-    font-family: 'Pretendard-Bold';
-}
-
-.BannerImg{
-    margin-top: 4vh;
-    width: 8.25vh;
-    height: 8.25vh;
-    background-image: url("../../Assets/BannerImg.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+.BannerComment2{
+    font-size: 17px;
+    font-family: 'Pretendard-SemiBold';
+    display: flex;
+    justify-content: center;
 }
 
 .tap1Header{
