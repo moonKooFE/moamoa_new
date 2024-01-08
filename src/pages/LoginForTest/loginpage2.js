@@ -75,7 +75,8 @@ function App(){
                 <div className={styles.arrow5} onClick={() => navigate(-1)}></div>
                 <h1 className={styles.logintext2}>로그인하기</h1>
                 <form onSubmit={onSubmitHandler}>
-                    <div className={styles.emailname}>이메일
+                    <div className={styles.emailname}>
+                        <div>이메일</div>
                         <input type="email" placeholder='이메일을 입력해주세요' onChange={saveEmail} value={email} className={styles.emailinput} required></input>
                         <div className={styles.del} onClick={reset1}>X</div>
                     </div>

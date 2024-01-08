@@ -23,7 +23,7 @@
 }
 
 
-.emailname{
+.emailname, .passwordname{
     color: rgb(0, 0, 0);
     border-bottom: 0.2vh solid #E6E9EC;
     width: 300px;
@@ -32,13 +32,15 @@
     flex-direction: column;
     margin: auto;
     font-weight: 600;
+    font-size: 2.5vh;
 }
+
 .emailinput{
     border-style:none;
     height: 3vh;
+    margin-top: 1.5vh;
     outline: none;
     color: rgb(0, 0, 0);
-    margin-top: 1.5vh;
     margin-left: 0;
 }
 .emailinput::placeholder{
@@ -46,15 +48,7 @@
 }
 
 .passwordname{
-    color: rgb(0, 0, 0);
-    border-bottom: 0.2vh solid #E6E9EC;
-    width: 300px;
-    height: 7.5vh;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
     margin-top: 5vh;
-    font-weight: 600;
 }
 
 .loginbtn1{
@@ -88,7 +82,7 @@
     background-repeat: no-repeat;
     background-size: 2.2vh;;
     margin-top: 4.5vh;
-    position: fixed;
+    position: absolute;
     margin-left: 280px;
     z-index: 1999;
     cursor: pointer;

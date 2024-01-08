@@ -75,7 +75,7 @@ const AdminPage = () => {
                 <div className={styles.Modal}>
                     <div className={styles.ModalBackground} onClick={Modalopen}></div>
                     <div className={styles.box1}>
-                        <img src={inform[0]} id={[inform[1]]} className={styles.image2}/>
+                        <img src={inform[0]} className={styles.modalImage} id={[inform[1]]} />
                         <div className={styles.acceptBtn} onClick={()=>Accept(inform[1])}>수락</div>
                         <div className={styles.refuseBtn} onClick={()=>Refuse(inform[1])}>거절</div>
                     </div>

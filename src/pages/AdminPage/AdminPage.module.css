@@ -54,6 +54,10 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modalImage{
+    height: 100px;
+}
+
 .box1{
     width: 39vh;
     height: 63.88vh;
