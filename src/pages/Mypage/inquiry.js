@@ -23,7 +23,7 @@ function App(){
             <div className={styles.bord2}>
                 <p className={styles.title}>개발자 메일</p>
                 <div  className={styles.box}><p className={styles.manageemail}>juyeon-gang1092@naver.com</p></div>
-                <button type="button" className={styles.copy} onClick={() => {handleCopyClipBoard('jyh0731@naver.com')}}>복사</button>
+                <button type="button" className={styles.copy} onClick={() => {handleCopyClipBoard('juyeon-gang1092@naver.com')}}>복사</button>
             </div>
             
         </div>

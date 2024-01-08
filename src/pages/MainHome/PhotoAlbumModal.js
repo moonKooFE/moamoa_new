@@ -224,13 +224,13 @@ function GenarateBtn(props) { // input의 조건을 검사하여 일치할 시 �
       setDisableBtn(false);
     });
   }
-  if(props.userIdList.length > 0){ // userId의 조건 검사
+  if(props.userIdList.length >= 0){ // userId의 조건 검사
     if(!disableBtn)  
-      return <div style={{fontSize:"1.75vh",color:'#1C66FD'}} onClick={onGenarateHandler}>다음</div> // 활성화됨
+      return <div style={{fontSize:"1.75vh",color:'#1C66FD'}} onClick={onGenarateHandler}>생성</div> // 활성화됨
     else
       return <div style={{fontSize:"1.75vh",color:'#1C66FD'}}>생성 중..</div> // 활성화됨
   } else {
-    return <div style={{fontSize:"1.75vh",color:'#B7B6B4'}}>다음</div> // 비활성화
+    return <div style={{fontSize:"1.75vh",color:'#B7B6B4'}}>생성</div> // 비활성화
   }
 }
 
