@@ -18,7 +18,6 @@ function App(props){
     }
     useEffect(()=>{
         
-        console.log(Plus2);
         client.get('/albums/'+props.albumId+'/members')
         .then(function(res){
             setComments(res.data.response);
