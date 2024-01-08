@@ -1,5 +1,5 @@
 import styles from "./AllPosesContent.module.css";
-import stylesTap1 from "./AllPosesTap1.module.css";
+import stylesTab1 from "./AllPosesTab1.module.css";
 import styled from "styled-components";
 import {
   React,
@@ -67,8 +67,8 @@ const App = (props) => {
     }
 
     const menuArr = [
-        { name: "추천", content: <Tap1 currentTab={currentTab} height={props.height}/> },
-        { name: "스페셜", content: <Tap2 currentTab={currentTab} height={props.height}/> },
+        { name: "추천", content: <Tab1 currentTab={currentTab} height={props.height}/> },
+        { name: "스페셜", content: <Tab2 currentTab={currentTab} height={props.height}/> },
     ];
 
     const selectMenuHandler = (index) => {
@@ -108,23 +108,23 @@ const App = (props) => {
     
 
 
-const Tap1 = (props) => {
-    sessionStorage.setItem('category', 'ROLE_ADMIN'); // Tap1 이 로드될 때 category를 초기화
-    const [Tap1headerComponet, setTap1headerComponet] = useState(); // 탭1의 header를 커스텀하는 변수
+const Tab1 = (props) => {
+    sessionStorage.setItem('category', 'ROLE_ADMIN'); // Tab1 이 로드될 때 category를 초기화
+    const [Tab1headerComponet, setTab1headerComponet] = useState(); // 탭1의 header를 커스텀하는 변수
     
     return(
-      <div className={stylesTap1.Tap1}>
-        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tap1headerComponet}/>
+      <div className={stylesTab1.Tab1}>
+        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tab1headerComponet}/>
       </div>
     )
   }
   
-const Tap2 = (props) => {
-    const [Tap2headerComponet, setTap2headerComponet] = useState();
+const Tab2 = (props) => {
+    const [Tab2headerComponet, setTab2headerComponet] = useState();
   
     return( 
-      <div className={styles.Tap2}>
-        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tap2headerComponet}/>
+      <div className={styles.Tab2}>
+        <InfiniteScroll heightOfComponent={props.height} headerComponent={Tab2headerComponet}/>
       </div>
     )
 }

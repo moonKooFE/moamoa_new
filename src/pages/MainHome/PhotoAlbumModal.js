@@ -206,7 +206,7 @@ const App = (props) => {
       alert("새 앨범을 만들었어요!");
       props.modalState();
       window.location.replace('/mainpage', {state:{
-        Tap : 1
+        tab : 1
       }});
     })
     .catch(function(error){

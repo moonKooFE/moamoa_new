@@ -22,7 +22,7 @@ const PickPose = () => {
         //console.log(sessionStorage.getItem('isLogin'));
         if(sessionStorage.getItem('isLogin') == 'true'){
             navigate('/mainpage', {state:{
-            Tap : 1
+            tab : 1
             }});
         } else {
             OnMoveHandler();

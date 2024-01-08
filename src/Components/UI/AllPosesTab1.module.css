@@ -1,6 +1,6 @@
 @import url("../../Global.css");
 
-.Tap1{
+.tab1{
     width: 100%;
     height: auto;
     font-family: 'Pretendard-Regular';
@@ -36,7 +36,7 @@
     background-repeat: no-repeat;
 }
 
-.tap1Header{
+.tab1Header{
     height: 8vh;
     display: flex;
     align-items: center;
@@ -45,11 +45,11 @@
     padding-right: 2vh;
 }
 
-.tap1HeaderTotal{
+.tab1HeaderTotal{
     margin-bottom: 2vh;
 }
 
-.tap1HeaderPeople{
+.tab1HeaderPeople{
     /* Rectangle 1470 */
     box-sizing: border-box;
     background: rgba(217, 217, 217, 0.1);

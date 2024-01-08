@@ -1,6 +1,6 @@
 import styles from "./MainPage.module.css";
-import stylesTap1 from "./MainPageTap1.module.css";
-import stylesTap2 from "./MainPageTap2.module.css";
+import stylesTab1 from "./MainPageTab1.module.css";
+import stylesTab2 from "./MainPageTab2.module.css";
 import styled from "styled-components";
 import {
   React,
@@ -90,13 +90,13 @@ const MainPage = (props) => {
 
   const location = useLocation();
   
-  const [currentTab, clickTab] = useState(location.state!=null?location.state.Tap:0);
+  const [currentTab, clickTab] = useState(location.state!=null?location.state.tab:0);
 
   //console.log(decodeJWT.parseJwt(token));
 
   const menuArr = [
-    { name: "포즈보기", content: <Tap1/> },
-    { name: "사진첩", content: <Tap2/> },
+    { name: "포즈보기", content: <Tab1/> },
+    { name: "사진첩", content: <Tab2/> },
   ];
 
   const selectMenuHandler = (index) => {
@@ -146,7 +146,7 @@ const MainPage = (props) => {
 
 export default MainPage;
 
-const Tap1 = (props) => {
+const Tab1 = (props) => {
 
   const [imgUrl, setImgUrl] = useState("");
   const [people, setPeople] = useState(1);
@@ -181,11 +181,11 @@ const Tap1 = (props) => {
   
   
   return(
-    <div className={stylesTap1.Tap1}>
+    <div className={stylesTab1.Tab1}>
       {modal1 ? <PhotoModal modalState={modalState} modal={modal1} imgUrl={imgUrl}/>: null}
-      <div className={stylesTap1.B}><div className={stylesTap1.Banner} onClick={modalState}>
-        <div className={stylesTap1.BannerComment}>재밌는 포즈가 생각 안나시나요?</div>
-        <div className={stylesTap1.BannerComment2}>지금 랜덤 포즈 뽑아보세요!</div>
+      <div className={stylesTab1.B}><div className={stylesTab1.Banner} onClick={modalState}>
+        <div className={stylesTab1.BannerComment}>재밌는 포즈가 생각 안나시나요?</div>
+        <div className={stylesTab1.BannerComment2}>지금 랜덤 포즈 뽑아보세요!</div>
       </div>
       </div>
       <AllposesContent height='57vh'/>
@@ -193,10 +193,10 @@ const Tap1 = (props) => {
   )
 }
 
-const Tap2 = (props) => {
-  const [Tap2headerComponent, setTap2headerComponent] = useState(
-    <div className={stylesTap2.tap2Header}>
-      <div className={stylesTap2.tap2HeaderTitle}><span>{sessionStorage.getItem("nickname")}</span>님의 추억</div>
+const Tab2 = (props) => {
+  const [Tab2headerComponent, setTab2headerComponent] = useState(
+    <div className={stylesTab2.tap2Header}>
+      <div className={stylesTab2.tap2HeaderTitle}><span>{sessionStorage.getItem("nickname")}</span>님의 추억</div>
     </div>
   );
 
@@ -222,20 +222,20 @@ const Tap2 = (props) => {
   }, [])
 
   return(
-    <div className={stylesTap2.Tap2}>
+    <div className={stylesTab2.Tab2}>
       { /* modal 인터페이스 */}
       { modal == true ? <PhotoAlbumModal modalState={modalState} /> : null } 
       { album.length === 0 
-      ? <div className={stylesTap2.bg}>
-        {Tap2headerComponent}
-        <img src={Albums} className={stylesTap2.albumimg}/>
-        <div className={stylesTap2.comment1}>아직 사진첩이 없어요</div>
-        <div className={stylesTap2.comment2}>화면 아래 사진첩 아이콘을 눌러</div>
-        <div className={stylesTap2.comment2}>소중한 사람들과 추억을 공유해보세요!</div> 
+      ? <div className={stylesTab2.bg}>
+        {Tab2headerComponent}
+        <img src={Albums} className={stylesTab2.albumimg}/>
+        <div className={stylesTab2.comment1}>아직 사진첩이 없어요</div>
+        <div className={stylesTab2.comment2}>화면 아래 사진첩 아이콘을 눌러</div>
+        <div className={stylesTab2.comment2}>소중한 사람들과 추억을 공유해보세요!</div> 
       </div>
       
-      : <AlbumsIS heightOfComponent={'79vh'} headerScrolledComponent={Tap2headerComponent}/>}
-      <div className={stylesTap2.createAlbum} onClick={()=>{setModal(!modal)}}>
+      : <AlbumsIS heightOfComponent={'79vh'} headerScrolledComponent={Tab2headerComponent}/>}
+      <div className={stylesTab2.createAlbum} onClick={()=>{setModal(!modal)}}>
         <img src={createAlbumImg}/>
       </div>
     </div>

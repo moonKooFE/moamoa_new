@@ -63,7 +63,7 @@ function ShowRandPose(){
   const albumPage = () => {
     if(Boolean(sessionStorage.getItem('isLogin'))){
       navigate('/mainpage', {state:{
-        Tap : 1
+        tab : 1
       }});
     } else {
       modalState();

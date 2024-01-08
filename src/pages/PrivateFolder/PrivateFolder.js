@@ -36,7 +36,7 @@ const PrivateFolder = (props) => {
             { modal2 ? <EscapeModal modalState={modalState} modalState2={modalState2} albumId={albumId}/> : null}
             
             <div className={styles.box4}>
-                <img src={Arrow} className={styles.arrow2} onClick={() => navigate('/mainpage' ,{state:{Tap:1}})}></img>
+                <img src={Arrow} className={styles.arrow2} onClick={() => navigate('/mainpage' ,{state:{tab:1}})}></img>
                 <div className={styles.username2}>{albumName}</div>
                 <img src={Burger} className={styles.trash} onClick={modalState}/>
             </div>
