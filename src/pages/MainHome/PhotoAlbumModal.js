@@ -205,7 +205,8 @@ const App = (props) => {
       //console.log(response);
       alert("새 앨범을 만들었어요!");
       props.modalState();
-      window.location.replace('/mainpage');
+      window.location.reload('/mainpage');
+      navigate('/mainpage', {state:{tab : 1}});
     })
     .catch(function(error){
       console.log(error);
