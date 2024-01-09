@@ -253,7 +253,6 @@ const App = (props) => {
     }
   }
   
-
   if(pageIdx == 1){
     return content[0];
   } else if (pageIdx == 2) {
