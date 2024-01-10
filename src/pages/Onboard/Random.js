@@ -6,6 +6,8 @@ import GeneralBtn from "../../Components/Layout/GeneralBtn";
 import Modal from "../../Components/UI/NeedLoginModal";
 import ReactDOM from 'react-dom';
 import { useState } from "react";
+import Book from "../../Assets/Book.svg";
+import Gift from "../../Assets/Gift.svg";
 
 const PickPose = () => {
     const navigate = useNavigate();
@@ -35,13 +37,11 @@ const PickPose = () => {
             
             <a onClick={()=>navigate('/Onboard')} className={styles.start}>시작하기</a>
             <img src={Onboard} className={styles.img}/>
-            <div className={styles.imgContainer} onClick={() => {nextPage()}}>
-                <div>
-                    <div className={styles.script1}>랜덤포즈 뽑기</div>
-                    <div className={styles.script2}>여기를 클릭하세요</div>
-                </div>
+            <div className = {styles.group1}>
+                <div className={styles.circle1} onClick={albumPage}><div className ={styles.Book} /><div>사진첩 만들기</div></div>
+                <div className={styles.circle2} onClick={nextPage}><div className = {styles.Gift} /><div>랜덤포즈 뽑기</div></div>
             </div>
-            <GeneralBtn title="사진첩 만들기" onClick={albumPage} width={'39vh'}/>
+            
             {showModal && ReactDOM.createPortal(<Modal onClose={() => setShowModal(false)}/>, portalElement)}
         </div>
     )
