@@ -157,16 +157,16 @@
 <table>
 <tr>
     <td>
-    <img src="https://github.com/user-attachments/assets/46a40e64-9ef1-46f6-af89-2ce3f181002f" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/46a40e64-9ef1-46f6-af89-2ce3f181002f" style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/fdac15bc-8f97-4ae0-8a74-d0decc4b80ed" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/fdac15bc-8f97-4ae0-8a74-d0decc4b80ed"  style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/6862c924-2a14-4933-bc3b-c80ca2967b25" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/6862c924-2a14-4933-bc3b-c80ca2967b25" style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/ebf96e29-7307-488a-83af-fcb133774ca4" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/ebf96e29-7307-488a-83af-fcb133774ca4"  style="object-fit: contain"/>
     </td>
 </tr>
 </table>
@@ -176,16 +176,16 @@
 <table>
 <tr>
     <td>
-    <img src="https://github.com/user-attachments/assets/8550d74a-2f7a-4462-9db6-9455672aaf77" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/8550d74a-2f7a-4462-9db6-9455672aaf77" style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/4da23182-57a1-4021-b4f5-931a85b212e6" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/4da23182-57a1-4021-b4f5-931a85b212e6" style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/03d3ab9d-cfb8-4142-acef-13e81f790eda" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/03d3ab9d-cfb8-4142-acef-13e81f790eda" style="object-fit: contain"/>
     </td>
     <td>
-    <img src="https://github.com/user-attachments/assets/71459175-db19-40b4-9b92-577ec937aa5f" height="500px"/>
+    <img src="https://github.com/user-attachments/assets/71459175-db19-40b4-9b92-577ec937aa5f" style="object-fit: contain"/>
     </td>
 </tr>
 </table>
