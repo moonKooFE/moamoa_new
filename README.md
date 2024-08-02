@@ -15,6 +15,7 @@
 
 <br/>
 
+</div>
 
 # 🤝 팀 소개 - __Pixel Poineers__
 
@@ -115,6 +116,8 @@
 <br/>
 
 # 🛠️ 기술 스택
+
+<div align='center'>
 
 <table>
 <tr>
