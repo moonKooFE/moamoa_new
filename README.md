@@ -78,7 +78,7 @@
             <br/>
             <b style='font-size:12px'>Designer</b>
             <br/>
-            <img src='https://github.com/user-attachments/assets/c30ced5f-7ee9-4e10-a4b3-7880edd38650' height='120px'>
+            <img src='https://github.com/user-attachments/assets/ba842b40-969f-493d-b476-07f5fbbec033' height='120px'>
             <br/>
             </a>
         </td>
@@ -87,7 +87,7 @@
             <br/>
             <b style='font-size:12px'>Backend</b>
             <br/>
-            <img src='https://github.com/user-attachments/assets/c30ced5f-7ee9-4e10-a4b3-7880edd38650' height='120px'>
+            <img src='https://github.com/user-attachments/assets/aaae79f2-407c-4130-8f78-43712362c8b8' height='120px'>
             <br/>
             <a href="https://github.com/jayou2323" target="_blank">
                 <img src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
